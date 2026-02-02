@@ -1,0 +1,38 @@
+{
+  "id": "phase3_option_a_retatrutide",
+  "name": "Phase 3 Option A: Metabolic Intensification (Retatrutide)",
+  "peptides": [
+    "retatrutide"
+  ],
+  "primary_goals": [
+    "Aggressive weight/fat loss",
+    "Maximum metabolic impact",
+    "Beta cell support",
+    "Insulin sensitivity"
+  ],
+  "mechanism": "Triple agonist (GLP-1/GIP/Glucagon) provides comprehensive metabolic regulation. GLP-1 for appetite/insulin, GIP for adipose remodeling, Glucagon for energy expenditure and hepatic fat oxidation",
+  "protocol": {
+    "retatrutide": {
+      "dose": "Start 1-2mg, titrate to 8-12mg weekly",
+      "frequency": "Once weekly",
+      "administration": "Subcutaneous",
+      "titration": "Increase by 2mg every 4 weeks based on tolerance",
+      "timing": "Consistent weekly schedule"
+    }
+  },
+  "phase": "Phase 3 - Optional",
+  "duration": "If aggressive metabolic intervention needed",
+  "cycling": "Per medical protocol, typically continuous while losing weight",
+  "cost_estimate": "$200-350/month",
+  "synergy_notes": "Nuclear option for metabolic health. Add only if Phase 1-2 insufficient for visceral fat/insulin goals",
+  "considerations": [
+    "Requires slow titration",
+    "Monitor for GI side effects",
+    "Most powerful option for beta cell support",
+    "Typically requires medical supervision",
+    "Consider if Phases 1-2 don't achieve metabolic goals"
+  ],
+  "ordered": true,
+  "stack_status": "All peptides ordered",
+  "conversation_tier": "Phase 3 Option A - Aggressive Metabolic"
+}

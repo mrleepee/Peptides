@@ -1,0 +1,28 @@
+{
+  "id": "kpv",
+  "name": "KPV",
+  "type": "Tripeptide (from \u03b1-MSH)",
+  "category": "Anti-Inflammatory & Gut Health",
+  "mechanism": "Downregulates NF-\u03baB and MAPK inflammatory signaling pathways. Transported by PepT1 (intestinal peptide transporter) suggesting direct gut tissue uptake",
+  "half_life": "Short (minutes to hours)",
+  "dosing": "500-1000mcg daily, can be oral or subcutaneous",
+  "administration": "Oral (for gut targeting) or subcutaneous",
+  "primary_benefits": [
+    "Downregulates inflammatory signaling (NF-\u03baB, MAPK)",
+    "Demonstrated efficacy in colitis models",
+    "Antimicrobial properties for SIBO",
+    "Direct gut tissue uptake via PepT1",
+    "Complements BPC-157 for gut healing"
+  ],
+  "research_findings": "Tripeptide derived from alpha-MSH. Mouse colitis studies showed anti-inflammatory efficacy. Can be transported directly into gut tissue via peptide transporter PepT1",
+  "system_targets": [
+    "Digestive",
+    "Immune",
+    "Anti-Inflammatory"
+  ],
+  "accessibility": "Research peptide, widely available",
+  "cost_tier": "low",
+  "ordered": true,
+  "special_notes": "Particularly valuable for SIBO and inflammatory gut conditions when combined with BPC-157",
+  "order_status": "Ordered and received"
+}

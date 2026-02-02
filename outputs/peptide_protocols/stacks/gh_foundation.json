@@ -1,0 +1,37 @@
+{
+  "id": "gh_foundation",
+  "name": "Growth Hormone Foundation Stack",
+  "peptides": [
+    "tesamorelin",
+    "ipamorelin"
+  ],
+  "primary_goals": [
+    "GH optimization",
+    "Body composition improvement",
+    "Recovery enhancement",
+    "Sleep quality",
+    "Connective tissue health"
+  ],
+  "mechanism": "GHRH + GHS creates synergistic GH release. Tesamorelin provides the 'signal' while Ipamorelin amplifies the 'release'. Research suggests the combination produces 3-5x greater GH output than either alone.",
+  "protocol": {
+    "tesamorelin": {
+      "dose": "1-2mg daily",
+      "timing": "Before bed",
+      "administration": "Subcutaneous"
+    },
+    "ipamorelin": {
+      "dose": "100-300mcg",
+      "frequency": "2-3x daily",
+      "timing": "Morning, post-workout, before bed",
+      "administration": "Subcutaneous"
+    }
+  },
+  "cycling": "Can run continuously or cycle 5 days on, 2 days off",
+  "synergy_notes": "The combination of GHRH analog (Tesamorelin) and GHS (Ipamorelin) creates a more physiological GH pulse than either alone",
+  "considerations": [
+    "Monitor fasting glucose",
+    "May enhance insulin sensitivity initially",
+    "Effects on body composition typically visible after 3-6 months"
+  ],
+  "stack_status": "Contains discussed-only peptides"
+}

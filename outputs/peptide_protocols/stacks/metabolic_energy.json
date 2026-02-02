@@ -1,0 +1,39 @@
+{
+  "id": "metabolic_energy",
+  "name": "Energy & Metabolic Control Stack",
+  "peptides": [
+    "motsc",
+    "retatrutide"
+  ],
+  "primary_goals": [
+    "Metabolic optimization",
+    "Weight management",
+    "Enhanced energy",
+    "Improved insulin sensitivity",
+    "Mitochondrial function"
+  ],
+  "mechanism": "MOTS-c enhances mitochondrial function and acts as an exercise mimetic via AMPK activation. Retatrutide provides comprehensive metabolic regulation through triple receptor agonism (GIP, GLP-1, glucagon)",
+  "protocol": {
+    "motsc": {
+      "dose": "5-15mg",
+      "frequency": "2-3x weekly",
+      "administration": "Subcutaneous",
+      "timing": "Morning or pre-workout"
+    },
+    "retatrutide": {
+      "dose": "Start 2mg, escalate to 8-12mg weekly",
+      "frequency": "Once weekly",
+      "administration": "Subcutaneous",
+      "timing": "Consistent weekly schedule"
+    }
+  },
+  "cycling": "MOTS-c: 8-12 weeks on, 4 weeks off. Retatrutide: per medical protocol",
+  "synergy_notes": "MOTS-c enhances mitochondrial capacity while Retatrutide optimizes metabolic signaling",
+  "considerations": [
+    "Retatrutide requires slow titration",
+    "Monitor for GI side effects with Retatrutide",
+    "Powerful combination for metabolic dysfunction",
+    "Retatrutide typically requires medical supervision"
+  ],
+  "stack_status": "All peptides ordered"
+}

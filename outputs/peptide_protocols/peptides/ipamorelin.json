@@ -1,0 +1,23 @@
+{
+  "id": "ipamorelin",
+  "name": "Ipamorelin",
+  "type": "Growth Hormone Secretagogue",
+  "category": "Growth Hormone",
+  "mechanism": "Stimulates GH release via ghrelin receptors (GHS-R1a) without significantly affecting cortisol, prolactin, or aldosterone",
+  "half_life": "~2 hours",
+  "dosing": "100-300mcg, 2-3x daily",
+  "administration": "Subcutaneous injection",
+  "primary_benefits": [
+    "Clean GH stimulation",
+    "Minimal hunger stimulation",
+    "Improved body composition",
+    "Enhanced recovery"
+  ],
+  "research_findings": "One of the most selective secretagogues with minimal side effects. Unlike GHRP-6 or GHRP-2, produces minimal hunger stimulation",
+  "system_targets": [
+    "Endocrine",
+    "Recovery"
+  ],
+  "accessibility": "Research peptide",
+  "cost_tier": "medium"
+}

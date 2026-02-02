@@ -1,0 +1,25 @@
+{
+  "id": "thymulin",
+  "name": "Thymulin",
+  "type": "Immunomodulator",
+  "category": "Immune & Longevity",
+  "mechanism": "Essential for T-cell differentiation and maturation, modulates cytokine production, influences neuroendocrine-immune communication. Requires zinc cofactor",
+  "half_life": "Not well established",
+  "dosing": "1-5mg daily or several times weekly, with zinc supplementation",
+  "administration": "Subcutaneous injection",
+  "primary_benefits": [
+    "Immune reconstitution",
+    "T-cell maturation",
+    "Autoimmune modulation",
+    "Anti-aging (immune senescence)",
+    "Wound healing",
+    "HPA axis interaction"
+  ],
+  "research_findings": "Nonapeptide naturally produced by thymic epithelial cells. Levels decrease dramatically with thymic involution, nearly undetectable by age 60",
+  "system_targets": [
+    "Immune",
+    "Endocrine"
+  ],
+  "accessibility": "Research peptide (limited)",
+  "cost_tier": "medium"
+}

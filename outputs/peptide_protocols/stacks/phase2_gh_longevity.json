@@ -1,0 +1,65 @@
+{
+  "id": "phase2_gh_longevity",
+  "name": "Phase 2: GH Axis & Longevity",
+  "peptides": [
+    "modgrf129",
+    "ipamorelin",
+    "epitalon",
+    "pinealon",
+    "semax"
+  ],
+  "primary_goals": [
+    "Visceral fat reduction",
+    "GH optimization",
+    "Telomere support",
+    "Cognitive enhancement",
+    "Circadian optimization"
+  ],
+  "mechanism": "Mod GRF + Ipamorelin create synergistic GH release for visceral fat. Epitalon activates telomerase. Pinealon supports pineal/circadian function. Semax enhances BDNF for cognition",
+  "protocol": {
+    "modgrf129": {
+      "dose": "100-200mcg",
+      "frequency": "2-3x daily",
+      "timing": "Morning, post-workout, before bed (with Ipamorelin)",
+      "administration": "Subcutaneous"
+    },
+    "ipamorelin": {
+      "dose": "100-300mcg",
+      "frequency": "2-3x daily",
+      "timing": "Same timing as Mod GRF (dose together)",
+      "administration": "Subcutaneous"
+    },
+    "epitalon": {
+      "dose": "5-10mg daily",
+      "duration": "10-20 days",
+      "frequency": "2-3 cycles per year",
+      "administration": "Subcutaneous"
+    },
+    "pinealon": {
+      "dose": "10-20mg daily",
+      "duration": "10-20 day cycles (coordinate with Epitalon)",
+      "administration": "Sublingual",
+      "note": "Cycle with Epitalon - both support pineal function"
+    },
+    "semax": {
+      "dose": "300-600mcg",
+      "frequency": "1-2x daily",
+      "administration": "Intranasal",
+      "timing": "Morning for focus"
+    }
+  },
+  "phase": "Phase 2",
+  "duration": "Add after 3-4 weeks on Phase 1",
+  "cycling": "GH peptides: continuous or 5/2. Bioregulators: cyclic. Semax: 4-6 weeks on, 1-2 weeks off",
+  "cost_estimate": "$180-320/month",
+  "synergy_notes": "GH stack addresses visceral fat. Bioregulators (Epitalon/Pinealon) work together on circadian/longevity. Semax for cognitive layer",
+  "considerations": [
+    "Add only after gut is healing (Phase 1)",
+    "Dose Mod GRF + Ipamorelin together for synergy",
+    "Run Epitalon + Pinealon cycles together",
+    "Monitor fasting glucose with GH peptides"
+  ],
+  "ordered": true,
+  "stack_status": "All peptides ordered",
+  "conversation_tier": "Tier 1 + Tier 2 - Core Protocol"
+}

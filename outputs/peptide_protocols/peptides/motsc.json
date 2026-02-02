@@ -1,0 +1,24 @@
+{
+  "id": "motsc",
+  "name": "MOTS-c",
+  "type": "Mitochondrial-derived Peptide",
+  "category": "Metabolic & Energy",
+  "mechanism": "Activates AMPK pathway, regulates metabolic homeostasis, enhances mitochondrial function, improves insulin sensitivity",
+  "half_life": "~8 hours",
+  "dosing": "5-15mg, 2-3x weekly",
+  "administration": "Subcutaneous injection",
+  "primary_benefits": [
+    "Enhanced mitochondrial function",
+    "Improved insulin sensitivity",
+    "Increased energy and endurance",
+    "Metabolic optimization",
+    "Potential longevity effects"
+  ],
+  "research_findings": "Encoded in mitochondrial DNA. Acts as exercise mimetic. Research shows metabolic improvements and lifespan extension in animal models",
+  "system_targets": [
+    "Metabolic",
+    "Mitochondrial"
+  ],
+  "accessibility": "Research peptide",
+  "cost_tier": "medium"
+}

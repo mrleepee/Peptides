@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Backups and broken files
+*-BROKEN.html
+*-backup.html
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

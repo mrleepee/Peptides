@@ -1,0 +1,25 @@
+{
+  "id": "selank",
+  "name": "Selank",
+  "type": "Anxiolytic Nootropic",
+  "category": "Cognitive & Mood",
+  "mechanism": "Modulates GABA and serotonin systems, influences BDNF expression, immunomodulatory effects",
+  "half_life": "~30 minutes (effects last hours)",
+  "dosing": "250-500mcg, 1-3x daily",
+  "administration": "Intranasal or subcutaneous",
+  "primary_benefits": [
+    "Anxiety reduction",
+    "Mood stabilization",
+    "Improved focus",
+    "Stress resilience",
+    "Neuroprotection",
+    "Immune modulation"
+  ],
+  "research_findings": "Synthetic derivative of tuftsin. Developed in Russia for anxiety disorders without sedation or addiction potential",
+  "system_targets": [
+    "Neurological",
+    "Mood"
+  ],
+  "accessibility": "Research peptide",
+  "cost_tier": "low"
+}

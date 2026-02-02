@@ -1,0 +1,40 @@
+{
+  "id": "cognitive",
+  "name": "Cognitive Enhancement Stack",
+  "peptides": [
+    "selank",
+    "semax"
+  ],
+  "primary_goals": [
+    "Enhanced focus and concentration",
+    "Anxiety reduction",
+    "Memory improvement",
+    "Neuroprotection",
+    "Mood stabilization"
+  ],
+  "mechanism": "Selank modulates GABA and serotonin for anxiolytic effects. Semax enhances BDNF and NGF for cognitive performance. Together they provide balanced cognitive enhancement without stimulation",
+  "protocol": {
+    "selank": {
+      "dose": "250-500mcg",
+      "frequency": "1-3x daily",
+      "administration": "Intranasal preferred",
+      "timing": "As needed for anxiety, or morning/afternoon"
+    },
+    "semax": {
+      "dose": "300-600mcg",
+      "frequency": "1-3x daily",
+      "administration": "Intranasal",
+      "timing": "Morning and/or when focus needed"
+    }
+  },
+  "cycling": "Can use daily for 4-6 weeks, then take 1-2 week break. Or use as-needed",
+  "synergy_notes": "Selank reduces anxiety/stress while Semax enhances focus and performance - creating calm, focused state",
+  "considerations": [
+    "Very well tolerated",
+    "Intranasal administration is convenient",
+    "Effects often felt within 20-30 minutes",
+    "No stimulant properties",
+    "Highly accessible and affordable"
+  ],
+  "stack_status": "Contains discussed-only peptides"
+}

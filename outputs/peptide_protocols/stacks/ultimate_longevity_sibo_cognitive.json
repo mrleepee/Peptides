@@ -1,0 +1,50 @@
+{
+  "id": "ultimate_longevity_sibo_cognitive",
+  "name": "Ultimate Longevity, SIBO & Cognitive Stack",
+  "peptides": [
+    "bpc157",
+    "epitalon",
+    "selank",
+    "semax"
+  ],
+  "primary_goals": [
+    "Gut healing (SIBO)",
+    "Longevity and anti-aging",
+    "Cognitive enhancement",
+    "Neuroprotection",
+    "Overall health optimization"
+  ],
+  "mechanism": "BPC-157 addresses gut repair and gut-brain axis. Epitalon provides telomerase activation for longevity. Selank/Semax optimize cognitive function and stress resilience",
+  "protocol": {
+    "bpc157": {
+      "dose": "250-500mcg",
+      "frequency": "2x daily",
+      "administration": "Oral for SIBO",
+      "timing": "Morning and evening"
+    },
+    "epitalon": {
+      "dose": "5-10mg daily",
+      "duration": "10-20 day cycles",
+      "frequency": "2-3 cycles per year",
+      "administration": "Subcutaneous"
+    },
+    "selank": {
+      "dose": "250-500mcg",
+      "frequency": "1-2x daily",
+      "administration": "Intranasal",
+      "timing": "As needed for anxiety"
+    },
+    "semax": {
+      "dose": "300-600mcg",
+      "frequency": "1-2x daily",
+      "administration": "Intranasal",
+      "timing": "Morning for focus"
+    }
+  },
+  "cycling": "BPC-157: 4-8 weeks for gut healing. Epitalon: cyclic. Selank/Semax: daily or as-needed",
+  "rationale": "Based on conversation recommendations for best bang-for-buck with goals of longevity, gut issues, and cognitive enhancement",
+  "accessibility": "All relatively accessible and affordable research peptides",
+  "cost_tier": "Low to medium overall",
+  "special_notes": "This is the recommended stack from the conversation for someone with SIBO, longevity goals, and cognitive enhancement needs",
+  "stack_status": "Contains discussed-only peptides"
+}

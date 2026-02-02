@@ -1,0 +1,41 @@
+{
+  "id": "gh_foundation_modgrf",
+  "name": "Growth Hormone Foundation Stack (Ordered Alternative)",
+  "peptides": [
+    "modgrf129",
+    "ipamorelin"
+  ],
+  "primary_goals": [
+    "GH optimization",
+    "Visceral fat reduction",
+    "Body composition improvement",
+    "Recovery enhancement",
+    "Alternative to Tesamorelin stack"
+  ],
+  "mechanism": "Mod GRF 1-29 (GHRH analogue without DAC) + Ipamorelin (GHS) creates synergistic GH release with natural pulsing. Similar to Tesamorelin+Ipamorelin but with shorter half-life GHRH component",
+  "protocol": {
+    "modgrf129": {
+      "dose": "100-200mcg",
+      "frequency": "2-3x daily",
+      "timing": "Morning, post-workout, before bed",
+      "administration": "Subcutaneous"
+    },
+    "ipamorelin": {
+      "dose": "100-300mcg",
+      "frequency": "2-3x daily",
+      "timing": "Same timing as Mod GRF (stack together)",
+      "administration": "Subcutaneous"
+    }
+  },
+  "cycling": "Can run continuously or cycle 5 days on, 2 days off",
+  "synergy_notes": "The combination creates physiological GH pulses. Mod GRF provides GHRH signal while Ipamorelin amplifies release via ghrelin pathway. No DAC means natural pulsing vs continuous elevation",
+  "considerations": [
+    "Dose together for maximum synergy",
+    "More frequent dosing than Tesamorelin (due to shorter half-life)",
+    "Cost-effective alternative to Tesamorelin",
+    "Monitor fasting glucose"
+  ],
+  "ordered": true,
+  "order_status": "This stack was actually ordered",
+  "stack_status": "All peptides ordered"
+}

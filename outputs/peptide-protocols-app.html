@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peptide Protocols & Stacks - Updated</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .ordered-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+        }
+        .discussed-badge {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            box-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        const PEPTIDES_DATA = {
+  "tesamorelin": {
+    "id": "tesamorelin",
+    "name": "Tesamorelin",
+    "type": "GHRH Analogue",
+    "category": "Growth Hormone",
+    "mechanism": "Binds to GHRH receptors in the pituitary, stimulating pulsatile GH release that mimics natural secretion patterns",
+    "half_life": "26-38 minutes",
+    "dosing": "1-2mg daily, subcutaneous",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Reduction of visceral adipose tissue",
+      "Improved triglyceride profiles",
+      "Potential cognitive benefits"
+    ],
+    "research_findings": "Clinical trials demonstrated 15-20% reduction in trunk fat. FDA-approved for HIV-associated lipodystrophy. Currently being studied for mild cognitive impairment",
+    "system_targets": [
+      "Endocrine",
+      "Metabolic"
+    ],
+    "accessibility": "Prescription required (FDA-approved)",
+    "cost_tier": "high",
+    "ordered": false,
+    "order_status": "Discussed but not ordered"
+  },
+  "ipamorelin": {
+    "id": "ipamorelin",
+    "name": "Ipamorelin",
+    "type": "Growth Hormone Secretagogue",
+    "category": "Growth Hormone",
+    "mechanism": "Stimulates GH release via ghrelin receptors (GHS-R1a) without significantly affecting cortisol, prolactin, or aldosterone",
+    "half_life": "~2 hours",
+    "dosing": "100-300mcg, 2-3x daily",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Clean GH stimulation",
+      "Minimal hunger stimulation",
+      "Improved body composition",
+      "Enhanced recovery"
+    ],
+    "research_findings": "One of the most selective secretagogues with minimal side effects. Unlike GHRP-6 or GHRP-2, produces minimal hunger stimulation",
+    "system_targets": [
+      "Endocrine",
+      "Recovery"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "medium",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "bpc157": {
+    "id": "bpc157",
+    "name": "BPC-157",
+    "type": "Synthetic Peptide",
+    "category": "Repair & Recovery",
+    "mechanism": "Upregulates growth hormone receptors, promotes angiogenesis via VEGF pathways, modulates nitric oxide systems, interacts with dopaminergic system",
+    "half_life": "~4 hours",
+    "dosing": "250-500mcg, 1-2x daily",
+    "administration": "Injectable or oral",
+    "primary_benefits": [
+      "Tendon and ligament healing",
+      "Gut mucosal repair",
+      "SIBO treatment support",
+      "Protection against NSAID damage",
+      "Neuroprotection",
+      "Dopaminergic system support"
+    ],
+    "research_findings": "Derived from human gastric juice. Stable in gastric acid. Direct gut-brain axis modulation. Supports recovery from dopamine-depleting agents",
+    "system_targets": [
+      "Digestive",
+      "Musculoskeletal",
+      "Neurological"
+    ],
+    "accessibility": "Widely available research peptide",
+    "cost_tier": "low",
+    "special_notes": "Best bang-for-buck for longevity, gut health (SIBO), and cognitive enhancement",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "tb500": {
+    "id": "tb500",
+    "name": "TB-500",
+    "type": "Thymosin Beta-4 Fragment",
+    "category": "Repair & Recovery",
+    "mechanism": "Sequesters G-actin, promoting cell migration and proliferation. Upregulates actin polymerization. Reduces inflammation via NF-\u03baB modulation",
+    "half_life": "~10 days (due to actin binding)",
+    "dosing": "2-5mg, 1-2x weekly",
+    "administration": "Subcutaneous or intramuscular injection",
+    "primary_benefits": [
+      "Tissue repair and regeneration",
+      "Wound healing",
+      "Reduced inflammation",
+      "Hair regrowth",
+      "Cardiac tissue repair"
+    ],
+    "research_findings": "43-amino-acid peptide naturally occurring in most tissues. Research includes cardiac post-MI studies, wound healing, corneal repair",
+    "system_targets": [
+      "Musculoskeletal",
+      "Cardiovascular",
+      "Integumentary"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "medium",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "ghkcu": {
+    "id": "ghkcu",
+    "name": "GHK-Cu",
+    "type": "Copper Peptide",
+    "category": "Aesthetic & Skin Health",
+    "mechanism": "Gene modulation affecting over 4,000 genes. Enhances collagen synthesis, promotes tissue remodeling, antioxidant properties",
+    "half_life": "Not well established",
+    "dosing": "Topical: various concentrations. Injectable: 1-3mg weekly",
+    "administration": "Topical or subcutaneous",
+    "primary_benefits": [
+      "Skin rejuvenation",
+      "Collagen synthesis",
+      "Wound healing",
+      "Hair growth",
+      "Anti-inflammatory effects"
+    ],
+    "research_findings": "Naturally declines with age. Modulates thousands of genes related to tissue repair and inflammation",
+    "system_targets": [
+      "Integumentary",
+      "Aesthetic"
+    ],
+    "accessibility": "Widely available (topical and research)",
+    "cost_tier": "low",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "motsc": {
+    "id": "motsc",
+    "name": "MOTS-c",
+    "type": "Mitochondrial-derived Peptide",
+    "category": "Metabolic & Energy",
+    "mechanism": "Activates AMPK pathway, regulates metabolic homeostasis, enhances mitochondrial function, improves insulin sensitivity",
+    "half_life": "~8 hours",
+    "dosing": "5-15mg, 2-3x weekly",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Enhanced mitochondrial function",
+      "Improved insulin sensitivity",
+      "Increased energy and endurance",
+      "Metabolic optimization",
+      "Potential longevity effects"
+    ],
+    "research_findings": "Encoded in mitochondrial DNA. Acts as exercise mimetic. Research shows metabolic improvements and lifespan extension in animal models",
+    "system_targets": [
+      "Metabolic",
+      "Mitochondrial"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "medium",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "retatrutide": {
+    "id": "retatrutide",
+    "name": "Retatrutide",
+    "type": "Triple Agonist",
+    "category": "Metabolic & Weight Management",
+    "mechanism": "Triple agonist of GIP, GLP-1, and glucagon receptors. Comprehensive metabolic regulation",
+    "half_life": "~7 days",
+    "dosing": "Escalating protocol, typically 2-12mg weekly",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Significant weight loss",
+      "Improved metabolic health",
+      "Better glycemic control",
+      "Reduced appetite",
+      "Enhanced fat oxidation"
+    ],
+    "research_findings": "Clinical trials showed superior weight loss compared to dual agonists. Phase 3 trials ongoing",
+    "system_targets": [
+      "Metabolic",
+      "Endocrine"
+    ],
+    "accessibility": "Research/prescription",
+    "cost_tier": "high",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "pinealon": {
+    "id": "pinealon",
+    "name": "Pinealon",
+    "type": "Bioregulator Peptide",
+    "category": "Longevity & Cognitive",
+    "mechanism": "Epigenetic CNS modulation, neuroprotection, circadian rhythm regulation, melatonin synthesis optimization",
+    "half_life": "Not well established",
+    "dosing": "10-20mg daily, cycled (10-20 days on, break)",
+    "administration": "Oral, sublingual, or intranasal",
+    "primary_benefits": [
+      "Neuroprotection",
+      "Cognitive support",
+      "Circadian rhythm optimization",
+      "Memory consolidation",
+      "Stress resilience",
+      "Sleep architecture improvement"
+    ],
+    "research_findings": "From Khavinson's Russian bioregulator research. Small peptides can cross blood-brain barrier",
+    "system_targets": [
+      "Neurological",
+      "Circadian"
+    ],
+    "accessibility": "Limited (specialized suppliers)",
+    "cost_tier": "medium",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "epitalon": {
+    "id": "epitalon",
+    "name": "Epitalon",
+    "type": "Bioregulator Peptide",
+    "category": "Longevity & Anti-Aging",
+    "mechanism": "Activates telomerase in somatic cells, stimulates pineal gland function, modulates neuroendocrine system",
+    "half_life": "Not well established",
+    "dosing": "5-10mg daily for 10-20 day cycles, 2-3 cycles per year",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Telomerase activation",
+      "Telomere elongation",
+      "Lifespan extension (animal studies)",
+      "Improved circadian rhythms",
+      "Antioxidant gene expression",
+      "Potential anti-cancer properties"
+    ],
+    "research_findings": "Tetrapeptide (Ala-Glu-Asp-Gly) from Khavinson research. Studies showed increased telomerase activity and telomere elongation in human cell cultures. Animal research demonstrated lifespan extension",
+    "system_targets": [
+      "Longevity",
+      "Endocrine",
+      "Cellular"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "medium",
+    "special_notes": "Best direct longevity play with telomerase activation data",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "thymulin": {
+    "id": "thymulin",
+    "name": "Thymulin",
+    "type": "Immunomodulator",
+    "category": "Immune & Longevity",
+    "mechanism": "Essential for T-cell differentiation and maturation, modulates cytokine production, influences neuroendocrine-immune communication. Requires zinc cofactor",
+    "half_life": "Not well established",
+    "dosing": "1-5mg daily or several times weekly, with zinc supplementation",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Immune reconstitution",
+      "T-cell maturation",
+      "Autoimmune modulation",
+      "Anti-aging (immune senescence)",
+      "Wound healing",
+      "HPA axis interaction"
+    ],
+    "research_findings": "Nonapeptide naturally produced by thymic epithelial cells. Levels decrease dramatically with thymic involution, nearly undetectable by age 60",
+    "system_targets": [
+      "Immune",
+      "Endocrine"
+    ],
+    "accessibility": "Research peptide (limited)",
+    "cost_tier": "medium",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "selank": {
+    "id": "selank",
+    "name": "Selank",
+    "type": "Anxiolytic Nootropic",
+    "category": "Cognitive & Mood",
+    "mechanism": "Modulates GABA and serotonin systems, influences BDNF expression, immunomodulatory effects",
+    "half_life": "~30 minutes (effects last hours)",
+    "dosing": "250-500mcg, 1-3x daily",
+    "administration": "Intranasal or subcutaneous",
+    "primary_benefits": [
+      "Anxiety reduction",
+      "Mood stabilization",
+      "Improved focus",
+      "Stress resilience",
+      "Neuroprotection",
+      "Immune modulation"
+    ],
+    "research_findings": "Synthetic derivative of tuftsin. Developed in Russia for anxiety disorders without sedation or addiction potential",
+    "system_targets": [
+      "Neurological",
+      "Mood"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "low",
+    "ordered": false,
+    "order_status": "Discussed but not ordered"
+  },
+  "semax": {
+    "id": "semax",
+    "name": "Semax",
+    "type": "Nootropic",
+    "category": "Cognitive Enhancement",
+    "mechanism": "BDNF expression, NGF modulation, dopaminergic and serotonergic system enhancement, neuroprotection",
+    "half_life": "~30 minutes (effects last hours)",
+    "dosing": "300-600mcg, 1-3x daily",
+    "administration": "Intranasal",
+    "primary_benefits": [
+      "Enhanced focus and concentration",
+      "Memory improvement",
+      "Neuroprotection",
+      "Mood elevation",
+      "Reduced cognitive fatigue",
+      "Stress adaptation"
+    ],
+    "research_findings": "ACTH(4-10) analog. Developed in Russia. Well-studied for cognitive enhancement and neuroprotection",
+    "system_targets": [
+      "Neurological",
+      "Cognitive"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "low",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "kpv": {
+    "id": "kpv",
+    "name": "KPV",
+    "type": "Tripeptide (from \u03b1-MSH)",
+    "category": "Anti-Inflammatory & Gut Health",
+    "mechanism": "Downregulates NF-\u03baB and MAPK inflammatory signaling pathways. Transported by PepT1 (intestinal peptide transporter) suggesting direct gut tissue uptake",
+    "half_life": "Short (minutes to hours)",
+    "dosing": "500-1000mcg daily, can be oral or subcutaneous",
+    "administration": "Oral (for gut targeting) or subcutaneous",
+    "primary_benefits": [
+      "Downregulates inflammatory signaling (NF-\u03baB, MAPK)",
+      "Demonstrated efficacy in colitis models",
+      "Antimicrobial properties for SIBO",
+      "Direct gut tissue uptake via PepT1",
+      "Complements BPC-157 for gut healing"
+    ],
+    "research_findings": "Tripeptide derived from alpha-MSH. Mouse colitis studies showed anti-inflammatory efficacy. Can be transported directly into gut tissue via peptide transporter PepT1",
+    "system_targets": [
+      "Digestive",
+      "Immune",
+      "Anti-Inflammatory"
+    ],
+    "accessibility": "Research peptide, widely available",
+    "cost_tier": "low",
+    "ordered": true,
+    "special_notes": "Particularly valuable for SIBO and inflammatory gut conditions when combined with BPC-157",
+    "order_status": "Ordered and received"
+  },
+  "modgrf129": {
+    "id": "modgrf129",
+    "name": "Mod GRF 1-29 (CJC-1295 no DAC)",
+    "type": "GHRH Analogue",
+    "category": "Growth Hormone",
+    "mechanism": "Modified GHRH (1-29) that stimulates pulsatile GH release without drug affinity complex (DAC). Provides natural GH pulse pattern",
+    "half_life": "~30 minutes",
+    "dosing": "100-200mcg, 2-3x daily",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Stimulates natural GH release patterns",
+      "No DAC means more physiological pulsing",
+      "Synergistic with Ipamorelin",
+      "Body composition improvement",
+      "Visceral fat reduction",
+      "Alternative to Tesamorelin"
+    ],
+    "research_findings": "Modified growth hormone releasing hormone without the drug affinity complex. Provides more natural pulsatile GH release than CJC-1295 with DAC. Often stacked with Ipamorelin for enhanced GH output",
+    "system_targets": [
+      "Endocrine",
+      "Metabolic"
+    ],
+    "accessibility": "Research peptide, widely available",
+    "cost_tier": "medium",
+    "ordered": true,
+    "special_notes": "Best alternative to Tesamorelin when paired with Ipamorelin. The 'no DAC' version allows natural pulsing vs continuous elevation",
+    "order_status": "Ordered and received"
+  }
+};
+        const STACKS_DATA = {
+  "phase1_foundation": {
+    "id": "phase1_foundation",
+    "name": "Phase 1: Foundation Protocol",
+    "peptides": [
+      "bpc157",
+      "motsc"
+    ],
+    "primary_goals": [
+      "Gut healing (SIBO)",
+      "Metabolic priming",
+      "Insulin resistance",
+      "Foundation for all other protocols"
+    ],
+    "mechanism": "BPC-157 repairs gut mucosa and modulates gut-brain axis. MOTS-c activates AMPK for metabolic optimization and insulin-independent glucose uptake. This phase addresses root causes before adding complexity",
+    "protocol": {
+      "bpc157": {
+        "dose": "250-500mcg",
+        "frequency": "2x daily",
+        "administration": "Oral (for SIBO/gut focus)",
+        "timing": "Morning and evening, empty stomach",
+        "duration": "Weeks 1-4 minimum"
+      },
+      "motsc": {
+        "dose": "5-10mg",
+        "frequency": "Weekly",
+        "administration": "Subcutaneous",
+        "timing": "Once per week",
+        "duration": "Ongoing"
+      }
+    },
+    "phase": "Phase 1",
+    "duration": "Weeks 1-4",
+    "cycling": "BPC-157: 4-8 weeks then assess. MOTS-c: 8-12 weeks on, 4 weeks off",
+    "cost_estimate": "$135-220/month",
+    "synergy_notes": "Gut healing (BPC-157) is upstream of metabolic issues. MOTS-c provides metabolic support while gut heals",
+    "considerations": [
+      "Start here before adding other peptides",
+      "Oral BPC-157 for direct gut contact",
+      "Assess gut symptoms before moving to Phase 2"
+    ],
+    "ordered": true,
+    "stack_status": "All peptides ordered",
+    "conversation_tier": "Tier 1 - Foundation"
+  },
+  "phase2_gh_longevity": {
+    "id": "phase2_gh_longevity",
+    "name": "Phase 2: GH Axis & Longevity",
+    "peptides": [
+      "modgrf129",
+      "ipamorelin",
+      "epitalon",
+      "pinealon",
+      "semax"
+    ],
+    "primary_goals": [
+      "Visceral fat reduction",
+      "GH optimization",
+      "Telomere support",
+      "Cognitive enhancement",
+      "Circadian optimization"
+    ],
+    "mechanism": "Mod GRF + Ipamorelin create synergistic GH release for visceral fat. Epitalon activates telomerase. Pinealon supports pineal/circadian function. Semax enhances BDNF for cognition",
+    "protocol": {
+      "modgrf129": {
+        "dose": "100-200mcg",
+        "frequency": "2-3x daily",
+        "timing": "Morning, post-workout, before bed (with Ipamorelin)",
+        "administration": "Subcutaneous"
+      },
+      "ipamorelin": {
+        "dose": "100-300mcg",
+        "frequency": "2-3x daily",
+        "timing": "Same timing as Mod GRF (dose together)",
+        "administration": "Subcutaneous"
+      },
+      "epitalon": {
+        "dose": "5-10mg daily",
+        "duration": "10-20 days",
+        "frequency": "2-3 cycles per year",
+        "administration": "Subcutaneous"
+      },
+      "pinealon": {
+        "dose": "10-20mg daily",
+        "duration": "10-20 day cycles (coordinate with Epitalon)",
+        "administration": "Sublingual",
+        "note": "Cycle with Epitalon - both support pineal function"
+      },
+      "semax": {
+        "dose": "300-600mcg",
+        "frequency": "1-2x daily",
+        "administration": "Intranasal",
+        "timing": "Morning for focus"
+      }
+    },
+    "phase": "Phase 2",
+    "duration": "Add after 3-4 weeks on Phase 1",
+    "cycling": "GH peptides: continuous or 5/2. Bioregulators: cyclic. Semax: 4-6 weeks on, 1-2 weeks off",
+    "cost_estimate": "$180-320/month",
+    "synergy_notes": "GH stack addresses visceral fat. Bioregulators (Epitalon/Pinealon) work together on circadian/longevity. Semax for cognitive layer",
+    "considerations": [
+      "Add only after gut is healing (Phase 1)",
+      "Dose Mod GRF + Ipamorelin together for synergy",
+      "Run Epitalon + Pinealon cycles together",
+      "Monitor fasting glucose with GH peptides"
+    ],
+    "ordered": true,
+    "stack_status": "All peptides ordered",
+    "conversation_tier": "Tier 1 + Tier 2 - Core Protocol"
+  },
+  "phase3_option_a_retatrutide": {
+    "id": "phase3_option_a_retatrutide",
+    "name": "Phase 3 Option A: Metabolic Intensification (Retatrutide)",
+    "peptides": [
+      "retatrutide"
+    ],
+    "primary_goals": [
+      "Aggressive weight/fat loss",
+      "Maximum metabolic impact",
+      "Beta cell support",
+      "Insulin sensitivity"
+    ],
+    "mechanism": "Triple agonist (GLP-1/GIP/Glucagon) provides comprehensive metabolic regulation. GLP-1 for appetite/insulin, GIP for adipose remodeling, Glucagon for energy expenditure and hepatic fat oxidation",
+    "protocol": {
+      "retatrutide": {
+        "dose": "Start 1-2mg, titrate to 8-12mg weekly",
+        "frequency": "Once weekly",
+        "administration": "Subcutaneous",
+        "titration": "Increase by 2mg every 4 weeks based on tolerance",
+        "timing": "Consistent weekly schedule"
+      }
+    },
+    "phase": "Phase 3 - Optional",
+    "duration": "If aggressive metabolic intervention needed",
+    "cycling": "Per medical protocol, typically continuous while losing weight",
+    "cost_estimate": "$200-350/month",
+    "synergy_notes": "Nuclear option for metabolic health. Add only if Phase 1-2 insufficient for visceral fat/insulin goals",
+    "considerations": [
+      "Requires slow titration",
+      "Monitor for GI side effects",
+      "Most powerful option for beta cell support",
+      "Typically requires medical supervision",
+      "Consider if Phases 1-2 don't achieve metabolic goals"
+    ],
+    "ordered": true,
+    "stack_status": "All peptides ordered",
+    "conversation_tier": "Phase 3 Option A - Aggressive Metabolic"
+  },
+  "phase3_option_b_klow": {
+    "id": "phase3_option_b_klow",
+    "name": "Phase 3 Option B: Enhanced Repair (Klow Blend Alternative)",
+    "peptides": [
+      "bpc157",
+      "tb500",
+      "ghkcu",
+      "kpv"
+    ],
+    "primary_goals": [
+      "Persistent SIBO/gut inflammation",
+      "Systemic tissue repair",
+      "Skin/aesthetic benefits",
+      "Enhanced anti-inflammatory"
+    ],
+    "mechanism": "BPC-157 for gut repair, KPV for inflammatory signaling, TB-500 for systemic cell migration, GHK-Cu for collagen/tissue remodeling. Addresses multiple repair pathways simultaneously",
+    "protocol": {
+      "bpc157": {
+        "dose": "250-500mcg",
+        "frequency": "2x daily",
+        "administration": "Injectable or oral",
+        "timing": "Morning and evening"
+      },
+      "kpv": {
+        "dose": "500-1000mcg",
+        "frequency": "1-2x daily",
+        "administration": "Oral or subcutaneous",
+        "timing": "With or separate from BPC-157"
+      },
+      "tb500": {
+        "dose": "2-5mg",
+        "frequency": "1-2x weekly",
+        "administration": "Subcutaneous or intramuscular",
+        "timing": "Flexible"
+      },
+      "ghkcu": {
+        "dose": "1-3mg weekly (injectable) or topical daily",
+        "frequency": "Weekly for injectable",
+        "administration": "Subcutaneous or topical",
+        "timing": "Flexible"
+      }
+    },
+    "phase": "Phase 3 - Optional",
+    "duration": "If gut inflammation persists after Phase 1",
+    "cycling": "4-8 weeks for acute issues, longer for chronic",
+    "cost_estimate": "$180-220/month",
+    "synergy_notes": "This is the 'Klow Blend' approach - comprehensive repair stack. Use if gut issues don't fully resolve with BPC-157 alone",
+    "considerations": [
+      "GHK-Cu provides aesthetic benefits but not essential for gut goals",
+      "KPV is the key addition if BPC-157 alone insufficient",
+      "TB-500 adds systemic repair layer",
+      "More expensive per mg than buying BPC-157 standalone"
+    ],
+    "ordered": true,
+    "stack_status": "All peptides ordered",
+    "conversation_tier": "Phase 3 Option B - Persistent Gut Issues"
+  },
+  "tier1_bang_for_buck": {
+    "id": "tier1_bang_for_buck",
+    "name": "Tier 1: Best Bang-for-Buck (Core Essentials)",
+    "peptides": [
+      "bpc157",
+      "epitalon"
+    ],
+    "primary_goals": [
+      "SIBO/gut healing",
+      "Longevity (telomere support)",
+      "Cognitive benefits (via gut-brain axis)",
+      "Maximum value for money"
+    ],
+    "mechanism": "BPC-157 is the clear winner hitting all three original goals (gut, longevity, cognition). Epitalon is best direct longevity play with telomerase activation data",
+    "protocol": {
+      "bpc157": {
+        "dose": "250-500mcg",
+        "frequency": "2x daily",
+        "administration": "Oral (for gut targeting)",
+        "timing": "Morning and evening, empty stomach"
+      },
+      "epitalon": {
+        "dose": "5-10mg daily",
+        "duration": "10-20 day cycles",
+        "frequency": "2-3 cycles per year",
+        "administration": "Subcutaneous"
+      }
+    },
+    "cycling": "BPC-157: 4-8 weeks. Epitalon: 2-3 cycles annually",
+    "cost_estimate": "$70-110/month average (Epitalon cyclic)",
+    "synergy_notes": "Minimum effective protocol if budget constrained. BPC-157 addresses gut (upstream of many issues). Epitalon for direct longevity intervention",
+    "considerations": [
+      "Most accessible and affordable",
+      "BPC-157 hits all three original goals",
+      "Epitalon has best longevity data",
+      "Can add other peptides later based on response"
+    ],
+    "conversation_quote": "BPC-157 \u2014 The Clear Winner. This hits all three of your goals and is the most accessible peptide on the list",
+    "ordered": true,
+    "stack_status": "All peptides ordered",
+    "conversation_tier": "Tier 1 - Highest Impact for Goals"
+  },
+  "tier2_supporting": {
+    "id": "tier2_supporting",
+    "name": "Tier 2: Strong Supporting Options",
+    "peptides": [
+      "pinealon",
+      "motsc"
+    ],
+    "primary_goals": [
+      "Cognitive focus",
+      "Circadian optimization",
+      "Mitochondrial function",
+      "Metabolic support"
+    ],
+    "mechanism": "Pinealon targets CNS tissue and circadian function (relevant to gut motility). MOTS-c addresses mitochondrial dysfunction implicated in aging, cognition, and gut motility",
+    "protocol": {
+      "pinealon": {
+        "dose": "10-20mg daily",
+        "duration": "10-20 day cycles",
+        "administration": "Sublingual",
+        "timing": "Daily during cycle"
+      },
+      "motsc": {
+        "dose": "5-10mg",
+        "frequency": "Weekly",
+        "administration": "Subcutaneous",
+        "timing": "Once per week"
+      }
+    },
+    "cycling": "Pinealon: 10-20 day cycles. MOTS-c: 8-12 weeks on, 4 weeks off",
+    "cost_estimate": "$100-180/month",
+    "synergy_notes": "Pinealon is easy entry (oral, affordable). MOTS-c compelling for metabolic/mitochondrial layer",
+    "considerations": [
+      "Pinealon: Less Western research, from Russian bioregulator tradition",
+      "MOTS-c: More expensive, less widely available",
+      "Both support energy and metabolic health",
+      "Add after Tier 1 if goals not fully met"
+    ],
+    "ordered": true,
+    "stack_status": "All peptides ordered",
+    "conversation_tier": "Tier 2 - Supporting Options"
+  }
+};
+
+        function App() {
+            const [view, setView] = useState('home');
+            const [selectedPeptide, setSelectedPeptide] = useState(null);
+            const [selectedStack, setSelectedStack] = useState(null);
+            const [searchTerm, setSearchTerm] = useState('');
+            const [filterCategory, setFilterCategory] = useState('all');
+            const [filterOrderStatus, setFilterOrderStatus] = useState('all');
+
+            const categories = [...new Set(Object.values(PEPTIDES_DATA).map(p => p.category))];
+
+            const filteredPeptides = Object.values(PEPTIDES_DATA).filter(peptide => {
+                const matchesSearch = peptide.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                    peptide.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                    peptide.type.toLowerCase().includes(searchTerm.toLowerCase());
+                const matchesCategory = filterCategory === 'all' || peptide.category === filterCategory;
+                const matchesOrderStatus = filterOrderStatus === 'all' ||
+                    (filterOrderStatus === 'ordered' && peptide.ordered) ||
+                    (filterOrderStatus === 'discussed' && !peptide.ordered);
+                return matchesSearch && matchesCategory && matchesOrderStatus;
+            });
+
+            const orderedCount = Object.values(PEPTIDES_DATA).filter(p => p.ordered).length;
+            const discussedCount = Object.values(PEPTIDES_DATA).filter(p => !p.ordered).length;
+
+            const getCostColor = (tier) => {
+                switch(tier) {
+                    case 'low': return 'bg-green-100 text-green-800';
+                    case 'medium': return 'bg-yellow-100 text-yellow-800';
+                    case 'high': return 'bg-red-100 text-red-800';
+                    default: return 'bg-gray-100 text-gray-800';
+                }
+            };
+
+            return (
+                <div className="min-h-screen">
+                    <header className="gradient-bg text-white shadow-lg">
+                        <div className="max-w-7xl mx-auto px-4 py-6">
+                            <h1 className="text-4xl font-bold">Peptide Protocols & Stacks</h1>
+                            <p className="mt-2 text-purple-100">Your personalized peptide database - {orderedCount} ordered, {discussedCount} discussed</p>
+                        </div>
+                    </header>
+
+                    <nav className="bg-white shadow-sm sticky top-0 z-10">
+                        <div className="max-w-7xl mx-auto px-4">
+                            <div className="flex space-x-8 py-4">
+                                <button onClick={() => setView('home')} className={`px-4 py-2 rounded-lg font-medium ${view === 'home' ? 'bg-purple-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
+                                    Home
+                                </button>
+                                <button onClick={() => setView('peptides')} className={`px-4 py-2 rounded-lg font-medium ${view === 'peptides' ? 'bg-purple-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
+                                    All Peptides ({Object.keys(PEPTIDES_DATA).length})
+                                </button>
+                                <button onClick={() => setView('stacks')} className={`px-4 py-2 rounded-lg font-medium ${view === 'stacks' ? 'bg-purple-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
+                                    Protocol Stacks ({Object.keys(STACKS_DATA).length})
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <main className="max-w-7xl mx-auto px-4 py-8">
+                        {view === 'home' && (
+                            <div>
+                                <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+                                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Your Peptide Protocol Database</h2>
+                                    <p className="text-gray-600 mb-4">
+                                        Based on your conversation and orders, this database covers {Object.keys(PEPTIDES_DATA).length} peptides and {Object.keys(STACKS_DATA).length} protocol stacks.
+                                    </p>
+                                    <div className="grid md:grid-cols-4 gap-6 mt-8">
+                                        <div className="bg-green-50 p-6 rounded-lg border-2 border-green-200">
+                                            <h3 className="text-2xl font-bold text-green-800 mb-2">{orderedCount} Ordered</h3>
+                                            <p className="text-gray-600">Peptides you purchased</p>
+                                        </div>
+                                        <div className="bg-purple-50 p-6 rounded-lg border-2 border-purple-200">
+                                            <h3 className="text-2xl font-bold text-purple-800 mb-2">{discussedCount} Discussed</h3>
+                                            <p className="text-gray-600">For future consideration</p>
+                                        </div>
+                                        <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
+                                            <h3 className="text-2xl font-bold text-blue-800 mb-2">{Object.keys(STACKS_DATA).length} Stacks</h3>
+                                            <p className="text-gray-600">Synergistic protocols</p>
+                                        </div>
+                                        <div className="bg-orange-50 p-6 rounded-lg border-2 border-orange-200">
+                                            <h3 className="text-2xl font-bold text-orange-800 mb-2">Evidence-Based</h3>
+                                            <p className="text-gray-600">Research-backed info</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="mb-8">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-4">📦 Peptides You Ordered</h3>
+                                    <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+                                        {Object.values(PEPTIDES_DATA).filter(p => p.ordered).map(peptide => (
+                                            <div key={peptide.id} className="card bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-green-200"
+                                                 onClick={() => { setSelectedPeptide(peptide); setView('peptide-detail'); }}>
+                                                <div className="flex items-center justify-between mb-2">
+                                                    <h4 className="text-sm font-bold text-gray-800">{peptide.name}</h4>
+                                                    <span className="ordered-badge badge text-xs">✓ ORDERED</span>
+                                                </div>
+                                                <p className="text-xs text-gray-600 mb-1">{peptide.category}</p>
+                                                <span className={`badge text-xs ${getCostColor(peptide.cost_tier)}`}>
+                                                    {peptide.cost_tier}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <h3 className="text-2xl font-bold text-gray-800 mb-4">💭 Discussed for Future</h3>
+                                <div className="grid md:grid-cols-3 gap-4 mb-8">
+                                    {Object.values(PEPTIDES_DATA).filter(p => !p.ordered).map(peptide => (
+                                        <div key={peptide.id} className="card bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-purple-200"
+                                             onClick={() => { setSelectedPeptide(peptide); setView('peptide-detail'); }}>
+                                            <div className="flex items-center justify-between mb-2">
+                                                <h4 className="text-sm font-bold text-gray-800">{peptide.name}</h4>
+                                                <span className="discussed-badge badge text-xs">DISCUSSED</span>
+                                            </div>
+                                            <p className="text-xs text-gray-600">{peptide.category}</p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <h3 className="text-2xl font-bold text-gray-800 mb-4">🎯 Recommended Stacks (Using Your Ordered Peptides)</h3>
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    {Object.values(STACKS_DATA).filter(s => s.stack_status === "All peptides ordered").slice(0, 4).map(stack => (
+                                        <div key={stack.id} className="card bg-white rounded-lg shadow-md p-6 cursor-pointer border-2 border-green-200"
+                                             onClick={() => { setSelectedStack(stack); setView('stack-detail'); }}>
+                                            <div className="flex items-center justify-between mb-3">
+                                                <h4 className="text-xl font-bold text-gray-800">{stack.name}</h4>
+                                                <span className="ordered-badge badge">ALL ORDERED</span>
+                                            </div>
+                                            <p className="text-gray-600 text-sm mb-3">{stack.mechanism.substring(0, 150)}...</p>
+                                            <div className="flex flex-wrap gap-2 mb-3">
+                                                {stack.peptides.map(pid => (
+                                                    <span key={pid} className="badge bg-green-100 text-green-800 text-xs">
+                                                        {PEPTIDES_DATA[pid]?.name}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {view === 'peptides' && (
+                            <div>
+                                <div className="mb-6 bg-white p-6 rounded-lg shadow-md">
+                                    <input
+                                        type="text"
+                                        placeholder="Search peptides..."
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4"
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                    />
+                                    
+                                    <div className="mb-4">
+                                        <p className="text-sm font-semibold text-gray-700 mb-2">Filter by Order Status:</p>
+                                        <div className="flex flex-wrap gap-2">
+                                            <button onClick={() => setFilterOrderStatus('all')}
+                                                    className={`px-4 py-2 rounded-lg ${filterOrderStatus === 'all' ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}>
+                                                All ({Object.keys(PEPTIDES_DATA).length})
+                                            </button>
+                                            <button onClick={() => setFilterOrderStatus('ordered')}
+                                                    className={`px-4 py-2 rounded-lg ${filterOrderStatus === 'ordered' ? 'bg-green-600 text-white' : 'bg-gray-200'}`}>
+                                                📦 Ordered ({orderedCount})
+                                            </button>
+                                            <button onClick={() => setFilterOrderStatus('discussed')}
+                                                    className={`px-4 py-2 rounded-lg ${filterOrderStatus === 'discussed' ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}>
+                                                💭 Discussed ({discussedCount})
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p className="text-sm font-semibold text-gray-700 mb-2">Filter by Category:</p>
+                                        <div className="flex flex-wrap gap-2">
+                                            <button onClick={() => setFilterCategory('all')}
+                                                    className={`px-4 py-2 rounded-lg text-sm ${filterCategory === 'all' ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}>
+                                                All
+                                            </button>
+                                            {categories.map(cat => (
+                                                <button key={cat} onClick={() => setFilterCategory(cat)}
+                                                        className={`px-4 py-2 rounded-lg text-sm ${filterCategory === cat ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}>
+                                                    {cat}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {filteredPeptides.map(peptide => (
+                                        <div key={peptide.id} className={`card bg-white rounded-lg shadow-md p-6 cursor-pointer border-2 ${peptide.ordered ? 'border-green-200' : 'border-purple-200'}`}
+                                             onClick={() => { setSelectedPeptide(peptide); setView('peptide-detail'); }}>
+                                            <div className="flex justify-between items-start mb-3">
+                                                <h3 className="text-xl font-bold text-gray-800">{peptide.name}</h3>
+                                                <div className="flex flex-col gap-1">
+                                                    {peptide.ordered ? (
+                                                        <span className="ordered-badge badge">ORDERED</span>
+                                                    ) : (
+                                                        <span className="discussed-badge badge">DISCUSSED</span>
+                                                    )}
+                                                    <span className={`badge ${getCostColor(peptide.cost_tier)}`}>
+                                                        {peptide.cost_tier}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p className="text-sm text-purple-600 mb-2">{peptide.type}</p>
+                                            <p className="text-sm text-gray-600 mb-3">{peptide.category}</p>
+                                            <p className="text-sm text-gray-700 mb-3 line-clamp-3">{peptide.mechanism}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {view === 'stacks' && (
+                            <div className="grid md:grid-cols-2 gap-6">
+                                {Object.values(STACKS_DATA).map(stack => (
+                                    <div key={stack.id} className={`card bg-white rounded-lg shadow-md p-6 cursor-pointer border-2 ${
+                                        stack.stack_status === 'All peptides ordered' ? 'border-green-200' : 'border-purple-200'
+                                    }`}
+                                         onClick={() => { setSelectedStack(stack); setView('stack-detail'); }}>
+                                        <div className="flex justify-between items-start mb-3">
+                                            <h3 className="text-2xl font-bold text-gray-800">{stack.name}</h3>
+                                            {stack.stack_status === 'All peptides ordered' && (
+                                                <span className="ordered-badge badge">ALL ORDERED</span>
+                                            )}
+                                        </div>
+                                        <p className="text-gray-600 mb-4">{stack.mechanism}</p>
+                                        <div className="mb-4">
+                                            <p className="text-sm font-semibold text-gray-700 mb-2">Peptides:</p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {stack.peptides.map(pid => {
+                                                    const p = PEPTIDES_DATA[pid];
+                                                    return (
+                                                        <span key={pid} className={`badge ${p?.ordered ? 'bg-green-100 text-green-800' : 'bg-purple-100 text-purple-800'}`}>
+                                                            {p?.name} {p?.ordered ? '✓' : ''}
+                                                        </span>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {view === 'peptide-detail' && selectedPeptide && (
+                            <div>
+                                <button onClick={() => setView('peptides')}
+                                        className="mb-4 px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+                                    ← Back to Peptides
+                                </button>
+                                <div className={`bg-white rounded-lg shadow-lg p-8 border-l-4 ${selectedPeptide.ordered ? 'border-green-500' : 'border-purple-500'}`}>
+                                    <div className="flex justify-between items-start mb-6">
+                                        <div>
+                                            <h2 className="text-3xl font-bold text-gray-800">{selectedPeptide.name}</h2>
+                                            <p className="text-lg text-purple-600 mt-1">{selectedPeptide.type}</p>
+                                        </div>
+                                        <div className="flex flex-col gap-2">
+                                            {selectedPeptide.ordered ? (
+                                                <span className="ordered-badge badge text-lg">✓ ORDERED</span>
+                                            ) : (
+                                                <span className="discussed-badge badge text-lg">DISCUSSED ONLY</span>
+                                            )}
+                                            <span className={`badge text-lg ${getCostColor(selectedPeptide.cost_tier)}`}>
+                                                {selectedPeptide.cost_tier} cost
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-lg p-6 mb-6">
+                                        <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                                            <span className="mr-2">💊</span> Quick Protocol Reference
+                                        </h3>
+                                        <div className="grid md:grid-cols-2 gap-4">
+                                            <div className="bg-white rounded p-4">
+                                                <h4 className="font-bold text-blue-700 mb-2">Dosing</h4>
+                                                <p className="text-gray-800 font-semibold">{selectedPeptide.dosing}</p>
+                                            </div>
+                                            <div className="bg-white rounded p-4">
+                                                <h4 className="font-bold text-blue-700 mb-2">Administration</h4>
+                                                <p className="text-gray-800 font-semibold">{selectedPeptide.administration}</p>
+                                            </div>
+                                            <div className="bg-white rounded p-4">
+                                                <h4 className="font-bold text-blue-700 mb-2">Half-Life</h4>
+                                                <p className="text-gray-800 font-semibold">{selectedPeptide.half_life}</p>
+                                            </div>
+                                            <div className="bg-white rounded p-4">
+                                                <h4 className="font-bold text-blue-700 mb-2">Category</h4>
+                                                <p className="text-gray-800 font-semibold">{selectedPeptide.category}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">Mechanism of Action</h3>
+                                        <p className="text-gray-600">{selectedPeptide.mechanism}</p>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">Primary Benefits</h3>
+                                        <ul className="space-y-2">
+                                            {selectedPeptide.primary_benefits.map((benefit, idx) => (
+                                                <li key={idx} className="text-gray-600">• {benefit}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">Research Findings</h3>
+                                        <p className="text-gray-600">{selectedPeptide.research_findings}</p>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">System Targets</h3>
+                                        <div className="flex flex-wrap gap-2">
+                                            {selectedPeptide.system_targets.map(target => (
+                                                <span key={target} className="badge bg-purple-100 text-purple-800">
+                                                    {target}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                                        <div>
+                                            <h3 className="font-bold text-gray-800 mb-2">Accessibility</h3>
+                                            <p className="text-gray-600">{selectedPeptide.accessibility}</p>
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-gray-800 mb-2">Status</h3>
+                                            <p className="text-gray-600">{selectedPeptide.order_status}</p>
+                                        </div>
+                                    </div>
+
+                                    {selectedPeptide.special_notes && (
+                                        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                                            <p className="text-yellow-800 font-semibold">⭐ Special Notes</p>
+                                            <p className="text-yellow-700 mt-1">{selectedPeptide.special_notes}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
+                        {view === 'stack-detail' && selectedStack && (
+                            <div>
+                                <button onClick={() => setView('stacks')}
+                                        className="mb-4 px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+                                    ← Back to Stacks
+                                </button>
+                                <div className={`bg-white rounded-lg shadow-lg p-8 border-l-4 ${
+                                    selectedStack.stack_status === 'All peptides ordered' ? 'border-green-500' : 'border-purple-500'
+                                }`}>
+                                    <div className="flex justify-between items-start mb-4">
+                                        <h2 className="text-3xl font-bold text-gray-800">{selectedStack.name}</h2>
+                                        {selectedStack.stack_status === 'All peptides ordered' && (
+                                            <span className="ordered-badge badge text-lg">✓ ALL ORDERED</span>
+                                        )}
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">Peptides in This Stack</h3>
+                                        <div className="flex flex-wrap gap-2">
+                                            {selectedStack.peptides.map(pid => {
+                                                const p = PEPTIDES_DATA[pid];
+                                                return (
+                                                    <span key={pid} 
+                                                          className={`badge text-lg cursor-pointer ${p?.ordered ? 'ordered-badge' : 'discussed-badge'}`}
+                                                          onClick={() => { setSelectedPeptide(p); setView('peptide-detail'); }}>
+                                                        {p?.name} {p?.ordered ? '✓' : ''}
+                                                    </span>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">Primary Goals</h3>
+                                        <ul className="space-y-2">
+                                            {selectedStack.primary_goals.map((goal, idx) => (
+                                                <li key={idx} className="text-gray-600">• {goal}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">Mechanism & Synergy</h3>
+                                        <p className="text-gray-600 mb-3">{selectedStack.mechanism}</p>
+                                        <p className="text-gray-600 italic">{selectedStack.synergy_notes}</p>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-3">Protocol Details</h3>
+                                        <div className="space-y-4">
+                                            {Object.entries(selectedStack.protocol).map(([peptideId, details]) => (
+                                                <div key={peptideId} className="bg-gray-50 p-4 rounded-lg">
+                                                    <h4 className="font-semibold text-purple-700 mb-2">
+                                                        {PEPTIDES_DATA[peptideId]?.name || peptideId}
+                                                    </h4>
+                                                    <div className="grid md:grid-cols-2 gap-3 text-sm">
+                                                        {Object.entries(details).map(([key, value]) => (
+                                                            <div key={key}>
+                                                                <span className="font-medium text-gray-700 capitalize">
+                                                                    {key.replace(/_/g, ' ')}:
+                                                                </span>
+                                                                <span className="text-gray-600 ml-2">{value}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">Cycling Protocol</h3>
+                                        <p className="text-gray-600">{selectedStack.cycling}</p>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-gray-800 mb-2">Considerations</h3>
+                                        <ul className="space-y-2">
+                                            {selectedStack.considerations.map((consideration, idx) => (
+                                                <li key={idx} className="text-gray-600">• {consideration}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {selectedStack.special_notes && (
+                                        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                                            <p className="text-yellow-800 font-semibold">⭐ Special Notes</p>
+                                            <p className="text-yellow-700 mt-1">{selectedStack.special_notes}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+                    </main>
+
+                    <footer className="bg-gray-800 text-white mt-12 py-8">
+                        <div className="max-w-7xl mx-auto px-4 text-center">
+                            <p className="text-gray-400">
+                                This information is for educational and research purposes only.
+                                Always consult with a qualified healthcare provider before starting any peptide protocol.
+                            </p>
+                            <p className="text-gray-500 mt-2 text-sm">
+                                Based on your orders and conversation • {orderedCount} ordered, {discussedCount} discussed • {new Date().getFullYear()}
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

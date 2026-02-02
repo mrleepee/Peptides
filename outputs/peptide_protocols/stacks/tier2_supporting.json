@@ -1,0 +1,41 @@
+{
+  "id": "tier2_supporting",
+  "name": "Tier 2: Strong Supporting Options",
+  "peptides": [
+    "pinealon",
+    "motsc"
+  ],
+  "primary_goals": [
+    "Cognitive focus",
+    "Circadian optimization",
+    "Mitochondrial function",
+    "Metabolic support"
+  ],
+  "mechanism": "Pinealon targets CNS tissue and circadian function (relevant to gut motility). MOTS-c addresses mitochondrial dysfunction implicated in aging, cognition, and gut motility",
+  "protocol": {
+    "pinealon": {
+      "dose": "10-20mg daily",
+      "duration": "10-20 day cycles",
+      "administration": "Sublingual",
+      "timing": "Daily during cycle"
+    },
+    "motsc": {
+      "dose": "5-10mg",
+      "frequency": "Weekly",
+      "administration": "Subcutaneous",
+      "timing": "Once per week"
+    }
+  },
+  "cycling": "Pinealon: 10-20 day cycles. MOTS-c: 8-12 weeks on, 4 weeks off",
+  "cost_estimate": "$100-180/month",
+  "synergy_notes": "Pinealon is easy entry (oral, affordable). MOTS-c compelling for metabolic/mitochondrial layer",
+  "considerations": [
+    "Pinealon: Less Western research, from Russian bioregulator tradition",
+    "MOTS-c: More expensive, less widely available",
+    "Both support energy and metabolic health",
+    "Add after Tier 1 if goals not fully met"
+  ],
+  "ordered": true,
+  "stack_status": "All peptides ordered",
+  "conversation_tier": "Tier 2 - Supporting Options"
+}

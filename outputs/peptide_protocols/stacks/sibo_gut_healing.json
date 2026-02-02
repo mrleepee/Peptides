@@ -1,0 +1,42 @@
+{
+  "id": "sibo_gut_healing",
+  "name": "SIBO & Gut Healing Stack (Ordered)",
+  "peptides": [
+    "bpc157",
+    "kpv"
+  ],
+  "primary_goals": [
+    "SIBO treatment support",
+    "Gut mucosal repair",
+    "Inflammatory gut condition management",
+    "Gut-brain axis optimization",
+    "Microbiome support"
+  ],
+  "mechanism": "BPC-157 repairs gut mucosa and modulates motility while KPV provides targeted anti-inflammatory signaling via NF-\u03baB and MAPK pathway modulation. Both can be taken orally for direct gut targeting",
+  "protocol": {
+    "bpc157": {
+      "dose": "250-500mcg",
+      "frequency": "2x daily",
+      "administration": "Oral (for gut focus)",
+      "timing": "Morning and evening, empty stomach"
+    },
+    "kpv": {
+      "dose": "500-1000mcg",
+      "frequency": "1-2x daily",
+      "administration": "Oral (for gut focus)",
+      "timing": "With or separate from BPC-157"
+    }
+  },
+  "cycling": "Run for 4-8 weeks for gut healing, can extend if needed",
+  "synergy_notes": "BPC-157 handles structural repair and motility while KPV specifically targets inflammatory signaling. The combination addresses both repair and inflammation aspects of SIBO and gut issues",
+  "considerations": [
+    "Oral administration allows direct gut tissue contact",
+    "Both transported via intestinal peptide transporters",
+    "May combine with antimicrobial SIBO protocols",
+    "Generally very well tolerated"
+  ],
+  "ordered": true,
+  "order_status": "Both peptides were ordered for gut healing",
+  "special_notes": "This is the most cost-effective and targeted approach for SIBO and inflammatory gut conditions from the conversation recommendations",
+  "stack_status": "All peptides ordered"
+}

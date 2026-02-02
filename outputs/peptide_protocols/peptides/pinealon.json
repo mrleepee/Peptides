@@ -1,0 +1,25 @@
+{
+  "id": "pinealon",
+  "name": "Pinealon",
+  "type": "Bioregulator Peptide",
+  "category": "Longevity & Cognitive",
+  "mechanism": "Epigenetic CNS modulation, neuroprotection, circadian rhythm regulation, melatonin synthesis optimization",
+  "half_life": "Not well established",
+  "dosing": "10-20mg daily, cycled (10-20 days on, break)",
+  "administration": "Oral, sublingual, or intranasal",
+  "primary_benefits": [
+    "Neuroprotection",
+    "Cognitive support",
+    "Circadian rhythm optimization",
+    "Memory consolidation",
+    "Stress resilience",
+    "Sleep architecture improvement"
+  ],
+  "research_findings": "From Khavinson's Russian bioregulator research. Small peptides can cross blood-brain barrier",
+  "system_targets": [
+    "Neurological",
+    "Circadian"
+  ],
+  "accessibility": "Limited (specialized suppliers)",
+  "cost_tier": "medium"
+}

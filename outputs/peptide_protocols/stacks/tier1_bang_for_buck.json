@@ -1,0 +1,42 @@
+{
+  "id": "tier1_bang_for_buck",
+  "name": "Tier 1: Best Bang-for-Buck (Core Essentials)",
+  "peptides": [
+    "bpc157",
+    "epitalon"
+  ],
+  "primary_goals": [
+    "SIBO/gut healing",
+    "Longevity (telomere support)",
+    "Cognitive benefits (via gut-brain axis)",
+    "Maximum value for money"
+  ],
+  "mechanism": "BPC-157 is the clear winner hitting all three original goals (gut, longevity, cognition). Epitalon is best direct longevity play with telomerase activation data",
+  "protocol": {
+    "bpc157": {
+      "dose": "250-500mcg",
+      "frequency": "2x daily",
+      "administration": "Oral (for gut targeting)",
+      "timing": "Morning and evening, empty stomach"
+    },
+    "epitalon": {
+      "dose": "5-10mg daily",
+      "duration": "10-20 day cycles",
+      "frequency": "2-3 cycles per year",
+      "administration": "Subcutaneous"
+    }
+  },
+  "cycling": "BPC-157: 4-8 weeks. Epitalon: 2-3 cycles annually",
+  "cost_estimate": "$70-110/month average (Epitalon cyclic)",
+  "synergy_notes": "Minimum effective protocol if budget constrained. BPC-157 addresses gut (upstream of many issues). Epitalon for direct longevity intervention",
+  "considerations": [
+    "Most accessible and affordable",
+    "BPC-157 hits all three original goals",
+    "Epitalon has best longevity data",
+    "Can add other peptides later based on response"
+  ],
+  "conversation_quote": "BPC-157 \u2014 The Clear Winner. This hits all three of your goals and is the most accessible peptide on the list",
+  "ordered": true,
+  "stack_status": "All peptides ordered",
+  "conversation_tier": "Tier 1 - Highest Impact for Goals"
+}

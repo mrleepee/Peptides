@@ -1,0 +1,44 @@
+{
+  "id": "repair_resilience",
+  "name": "Repair & Resilience Stack",
+  "peptides": [
+    "bpc157",
+    "tb500"
+  ],
+  "primary_goals": [
+    "Tissue repair acceleration",
+    "Injury recovery",
+    "Inflammation modulation",
+    "Gut health",
+    "Tendon/ligament healing"
+  ],
+  "mechanism": "BPC-157 promotes angiogenesis and tissue-specific repair while TB-500 enhances cell migration and reduces systemic inflammation. Combined, they address both local injury and systemic recovery.",
+  "protocol": {
+    "bpc157": {
+      "dose": "250-500mcg",
+      "frequency": "1-2x daily",
+      "administration": "Subcutaneous or oral (oral for gut issues)",
+      "timing": "Morning and/or evening"
+    },
+    "tb500": {
+      "dose": "2-5mg",
+      "frequency": "1-2x weekly",
+      "administration": "Subcutaneous or intramuscular",
+      "timing": "Flexible"
+    }
+  },
+  "cycling": "Acute injuries: 4-6 weeks. Chronic issues: 8-12 weeks with breaks",
+  "synergy_notes": "BPC-157's angiogenic and repair signaling complements TB-500's systemic anti-inflammatory and cell migration effects",
+  "considerations": [
+    "Can inject near injury site or systemically",
+    "BPC-157 oral administration effective for gut issues",
+    "Generally very well tolerated"
+  ],
+  "special_applications": {
+    "sibo_gut_health": "BPC-157 oral 250-500mcg 2x daily for direct gut repair",
+    "acute_injury": "Increase frequency, inject near injury if possible",
+    "chronic_inflammation": "Focus on TB-500 for systemic effects",
+    "with_kpv": "Add KPV 500-1000mcg daily for enhanced anti-inflammatory effects, especially for gut-focused healing"
+  },
+  "stack_status": "All peptides ordered"
+}

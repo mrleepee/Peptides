@@ -1,0 +1,44 @@
+{
+  "id": "phase1_foundation",
+  "name": "Phase 1: Foundation Protocol",
+  "peptides": [
+    "bpc157",
+    "motsc"
+  ],
+  "primary_goals": [
+    "Gut healing (SIBO)",
+    "Metabolic priming",
+    "Insulin resistance",
+    "Foundation for all other protocols"
+  ],
+  "mechanism": "BPC-157 repairs gut mucosa and modulates gut-brain axis. MOTS-c activates AMPK for metabolic optimization and insulin-independent glucose uptake. This phase addresses root causes before adding complexity",
+  "protocol": {
+    "bpc157": {
+      "dose": "250-500mcg",
+      "frequency": "2x daily",
+      "administration": "Oral (for SIBO/gut focus)",
+      "timing": "Morning and evening, empty stomach",
+      "duration": "Weeks 1-4 minimum"
+    },
+    "motsc": {
+      "dose": "5-10mg",
+      "frequency": "Weekly",
+      "administration": "Subcutaneous",
+      "timing": "Once per week",
+      "duration": "Ongoing"
+    }
+  },
+  "phase": "Phase 1",
+  "duration": "Weeks 1-4",
+  "cycling": "BPC-157: 4-8 weeks then assess. MOTS-c: 8-12 weeks on, 4 weeks off",
+  "cost_estimate": "$135-220/month",
+  "synergy_notes": "Gut healing (BPC-157) is upstream of metabolic issues. MOTS-c provides metabolic support while gut heals",
+  "considerations": [
+    "Start here before adding other peptides",
+    "Oral BPC-157 for direct gut contact",
+    "Assess gut symptoms before moving to Phase 2"
+  ],
+  "ordered": true,
+  "stack_status": "All peptides ordered",
+  "conversation_tier": "Tier 1 - Foundation"
+}

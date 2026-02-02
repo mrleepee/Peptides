@@ -1,0 +1,45 @@
+{
+  "id": "longevity",
+  "name": "Longevity & Cellular Health",
+  "peptides": [
+    "pinealon",
+    "epitalon",
+    "thymulin"
+  ],
+  "primary_goals": [
+    "Cellular repair and regeneration",
+    "Telomere support",
+    "Immune system optimization",
+    "Circadian rhythm regulation",
+    "Healthy aging"
+  ],
+  "mechanism": "Epitalon activates telomerase and supports telomere health. Pinealon provides neuroprotection and circadian optimization. Thymulin addresses immune senescence and T-cell function",
+  "protocol": {
+    "epitalon": {
+      "dose": "5-10mg daily",
+      "duration": "10-20 day cycles",
+      "frequency": "2-3 cycles per year",
+      "administration": "Subcutaneous"
+    },
+    "pinealon": {
+      "dose": "10-20mg daily",
+      "duration": "10-20 day cycles",
+      "administration": "Oral, sublingual, or intranasal"
+    },
+    "thymulin": {
+      "dose": "1-5mg",
+      "frequency": "Daily or several times weekly",
+      "administration": "Subcutaneous",
+      "note": "Take with zinc supplementation"
+    }
+  },
+  "cycling": "Bioregulators (Epitalon, Pinealon) use cyclic protocols. Thymulin can be more continuous",
+  "synergy_notes": "Addresses multiple hallmarks of aging: telomere attrition (Epitalon), immune senescence (Thymulin), and neurodegeneration (Pinealon)",
+  "considerations": [
+    "Best evidence for longevity from this stack",
+    "Epitalon has direct telomerase activation data",
+    "Requires commitment to cycling protocols",
+    "Effects are long-term, not immediately apparent"
+  ],
+  "stack_status": "All peptides ordered"
+}
