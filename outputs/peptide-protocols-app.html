@@ -3258,7 +3258,7 @@
                                                     <input
                                                         type="number"
                                                         value={targetDose}
-                                                        onChange={(e) => setTargetDose(Math.max(50, Math.min(20000, parseFloat(e.target.value) || 50)))}
+                                                        onChange={(e) => setTargetDose(parseFloat(e.target.value) || 0)} onBlur={(e) => { const val = parseFloat(e.target.value) || 50; setTargetDose(Math.max(50, Math.min(20000, val))); }}
                                                         className="w-24 px-3 py-2 border border-purple-300 rounded-lg font-bold text-purple-600 text-lg"
                                                     />
                                                 </div>
