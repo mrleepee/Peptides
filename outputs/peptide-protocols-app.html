@@ -3312,11 +3312,30 @@
                                                         <p className="text-gray-600 text-sm mt-2">doses</p>
                                                     </div>
 
-                                                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded mt-4">
-                                                        <p className="text-sm text-gray-700">
-                                                            <span className="font-bold text-yellow-800">Summary:</span> {vialSize}mg vial in {bacWater}mL gives {concentration.toFixed(1)} mcg/mL. Each {targetDose}mcg dose requires {volumePerDose.toFixed(3)}mL ({unitsPerDose.toFixed(1)} units).
-                                                        </p>
-                                                    </div>
+                                                    {(() => {
+                                                        const recommendedSyringe = volumePerDose <= 0.1 ? "0.2mL (30-unit) syringe" : "1mL (100-unit) syringe";
+                                                        const syringeNote = volumePerDose <= 0.1
+                                                            ? "Small dose - use 0.2mL syringe for better accuracy"
+                                                            : "Standard 1mL insulin syringe is fine";
+                                                        return (
+                                                            <div className="bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg shadow-md p-6 border-2 border-pink-300">
+                                                                <p className="text-gray-600 text-sm font-semibold mb-1">Recommended Syringe</p>
+                                                                <p className="text-3xl font-bold text-pink-700">{recommendedSyringe}</p>
+                                                                <p className="text-gray-600 text-xs mt-2">{syringeNote}</p>
+                                                            </div>
+                                                        );
+                                                    })()}
+
+                                                    {(() => {
+                                                        const recommendedSyringe = volumePerDose <= 0.1 ? "0.2mL syringe" : "1mL syringe";
+                                                        return (
+                                                            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded mt-4">
+                                                                <p className="text-sm text-gray-700">
+                                                                    <span className="font-bold text-yellow-800">Summary:</span> {vialSize}mg vial in {bacWater}mL gives {concentration.toFixed(1)} mcg/mL. Each {targetDose}mcg dose requires {volumePerDose.toFixed(3)}mL ({unitsPerDose.toFixed(1)} units). Use a <span className="font-semibold text-pink-700">{recommendedSyringe}</span> for accurate measurement.
+                                                                </p>
+                                                            </div>
+                                                        );
+                                                    })()}
                                                 </div>
                                             );
                                         })()}
@@ -3449,6 +3468,7 @@
                                         <li>• <span className="font-semibold">Concentration:</span> Total peptide per mL of reconstituted solution</li>
                                         <li>• <span className="font-semibold">Volume per Dose:</span> How many mL to draw for your target dose</li>
                                         <li>• <span className="font-semibold">Units per Dose:</span> How many units on a standard insulin syringe (100 units = 1mL)</li>
+                                        <li>• <span className="font-semibold">Recommended Syringe:</span> For doses ≤0.1mL, use a 0.2mL (30-unit) syringe for 10x better accuracy than a 1mL syringe</li>
                                         <li>• <span className="font-semibold">Total Doses:</span> How many complete doses you can get from one vial</li>
                                     </ul>
                                 </div>
