@@ -46,7 +46,7 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        const { useState } = React;
+        const { useState, useEffect } = React;
 
         const PEPTIDES_DATA = {
   "tesamorelin": {
@@ -2566,6 +2566,10 @@
             const [searchTerm, setSearchTerm] = useState('');
             const [filterCategory, setFilterCategory] = useState('all');
             const [filterOrderStatus, setFilterOrderStatus] = useState('all');
+
+            useEffect(() => {
+                window.scrollTo(0, 0);
+            }, [view]);
 
             const categories = [...new Set(Object.values(PEPTIDES_DATA).map(p => p.category))];
 
