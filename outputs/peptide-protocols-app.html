@@ -3398,40 +3398,118 @@
 
                                 <div className="bg-white rounded-lg shadow-md p-8">
                                     <h3 className="text-2xl font-bold text-gray-800 mb-6">Quick Presets</h3>
-                                    <p className="text-gray-600 mb-6">Click a preset to quickly load common reconstitution protocols:</p>
+                                    <p className="text-gray-600 mb-8">Click a preset to quickly load common reconstitution protocols, organized by vial size:</p>
 
-                                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                                        <button
-                                            onClick={() => { setVialSize(5); setBacWater(2); setTargetDose(250); }}
-                                            className="bg-gradient-to-br from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
-                                        >
-                                            <div className="text-lg mb-2">BPC-157</div>
-                                            <div className="text-xs opacity-90">5mg • 2mL • 250mcg</div>
-                                        </button>
+                                    {/* 5mg Vials Section */}
+                                    <div className="mb-8">
+                                        <h4 className="text-lg font-semibold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">5mg Vials</h4>
+                                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                            <button
+                                                onClick={() => { setVialSize(5); setBacWater(2); setTargetDose(250); }}
+                                                className="bg-gradient-to-br from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">BPC-157</div>
+                                                <div className="text-xs opacity-90">5mg • 2mL • 250mcg</div>
+                                            </button>
 
-                                        <button
-                                            onClick={() => { setVialSize(5); setBacWater(2); setTargetDose(2500); }}
-                                            className="bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
-                                        >
-                                            <div className="text-lg mb-2">TB-500</div>
-                                            <div className="text-xs opacity-90">5mg • 2mL • 2.5mg</div>
-                                        </button>
+                                            <button
+                                                onClick={() => { setVialSize(5); setBacWater(2); setTargetDose(500); }}
+                                                className="bg-gradient-to-br from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">KPV</div>
+                                                <div className="text-xs opacity-90">5mg • 2mL • 500mcg</div>
+                                            </button>
 
-                                        <button
-                                            onClick={() => { setVialSize(5); setBacWater(2); setTargetDose(200); }}
-                                            className="bg-gradient-to-br from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
-                                        >
-                                            <div className="text-lg mb-2">Ipamorelin</div>
-                                            <div className="text-xs opacity-90">5mg • 2mL • 200mcg</div>
-                                        </button>
+                                            <button
+                                                onClick={() => { setVialSize(5); setBacWater(2); setTargetDose(100); }}
+                                                className="bg-gradient-to-br from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">Mod GRF 1-29</div>
+                                                <div className="text-xs opacity-90">5mg • 2mL • 100mcg</div>
+                                            </button>
 
-                                        <button
-                                            onClick={() => { setVialSize(10); setBacWater(2); setTargetDose(10000); }}
-                                            className="bg-gradient-to-br from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
-                                        >
-                                            <div className="text-lg mb-2">Epitalon</div>
-                                            <div className="text-xs opacity-90">10mg • 2mL • 10mg</div>
-                                        </button>
+                                            <button
+                                                onClick={() => { setVialSize(5); setBacWater(2); setTargetDose(200); }}
+                                                className="bg-gradient-to-br from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">Ipamorelin</div>
+                                                <div className="text-xs opacity-90">5mg • 2mL • 200mcg</div>
+                                            </button>
+
+                                            <button
+                                                onClick={() => { setVialSize(5); setBacWater(2); setTargetDose(2500); }}
+                                                className="bg-gradient-to-br from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">TB-500</div>
+                                                <div className="text-xs opacity-90">5mg • 2mL • 2.5mg</div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    {/* 10mg Vials Section */}
+                                    <div className="mb-8">
+                                        <h4 className="text-lg font-semibold text-purple-700 mb-4 pb-2 border-b-2 border-purple-200">10mg Vials</h4>
+                                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                            <button
+                                                onClick={() => { setVialSize(10); setBacWater(2); setTargetDose(10000); }}
+                                                className="bg-gradient-to-br from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">Epitalon</div>
+                                                <div className="text-xs opacity-90">10mg • 2mL • 10mg</div>
+                                            </button>
+
+                                            <button
+                                                onClick={() => { setVialSize(10); setBacWater(2); setTargetDose(10000); }}
+                                                className="bg-gradient-to-br from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">MOTS-c</div>
+                                                <div className="text-xs opacity-90">10mg • 2mL • 10mg</div>
+                                            </button>
+
+                                            <button
+                                                onClick={() => { setVialSize(10); setBacWater(2); setTargetDose(600); }}
+                                                className="bg-gradient-to-br from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">Semax</div>
+                                                <div className="text-xs opacity-90">10mg • 2mL • 600mcg</div>
+                                            </button>
+
+                                            <button
+                                                onClick={() => { setVialSize(10); setBacWater(2); setTargetDose(10000); }}
+                                                className="bg-gradient-to-br from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">Pinealon</div>
+                                                <div className="text-xs opacity-90">10mg • 2mL • 10mg</div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    {/* 20mg Vials Section */}
+                                    <div className="mb-8">
+                                        <h4 className="text-lg font-semibold text-green-700 mb-4 pb-2 border-b-2 border-green-200">20mg Vials</h4>
+                                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                            <button
+                                                onClick={() => { setVialSize(20); setBacWater(2); setTargetDose(1000); }}
+                                                className="bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">Thymulin</div>
+                                                <div className="text-xs opacity-90">20mg • 2mL • 1mg</div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    {/* 50mg Vials Section */}
+                                    <div className="mb-8">
+                                        <h4 className="text-lg font-semibold text-orange-700 mb-4 pb-2 border-b-2 border-orange-200">50mg Vials</h4>
+                                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                            <button
+                                                onClick={() => { setVialSize(50); setBacWater(2); setTargetDose(2000); }}
+                                                className="bg-gradient-to-br from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+                                            >
+                                                <div className="text-lg mb-2">GHK-Cu</div>
+                                                <div className="text-xs opacity-90">50mg • 2mL • 2mg</div>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
 
