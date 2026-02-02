@@ -3331,14 +3331,14 @@
                                                     <input
                                                         type="number"
                                                         value={targetDose}
-                                                        onChange={(e) => setTargetDose(Math.max(50, Math.min(2000, parseFloat(e.target.value) || 50)))}
+                                                        onChange={(e) => setTargetDose(Math.max(50, Math.min(20000, parseFloat(e.target.value) || 50)))}
                                                         className="w-24 px-3 py-2 border border-purple-300 rounded-lg font-bold text-purple-600 text-lg"
                                                     />
                                                 </div>
                                                 <input
                                                     type="range"
                                                     min="50"
-                                                    max="2000"
+                                                    max="20000"
                                                     step="10"
                                                     value={targetDose}
                                                     onChange={(e) => setTargetDose(parseFloat(e.target.value))}
@@ -3346,7 +3346,7 @@
                                                 />
                                                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                                                     <span>50mcg</span>
-                                                    <span>2000mcg</span>
+                                                    <span>20000mcg</span>
                                                 </div>
                                             </div>
                                         </div>
