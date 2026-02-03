@@ -233,7 +233,7 @@ window.APP.ComponentName = function ComponentName({ prop1, prop2 }) {
   - `.card` - Card containers with hover effect
   - `.badge` - Base badge style
   - `.ordered-badge` - Green gradient for ordered peptides
-  - `.discussed-badge` - Purple gradient for discussed peptides
+  - `.of-interest-badge` - Purple gradient for peptides of interest
 - Responsive breakpoints: `md:` for tablet, `lg:` for desktop
 
 ## Important Considerations
@@ -252,7 +252,7 @@ window.APP.ComponentName = function ComponentName({ prop1, prop2 }) {
 
 6. **htm Library:** Vendored in `js/vendor/htm.min.js`. Source: https://unpkg.com/htm@3.1.1/dist/htm.js
 
-7. **Version 2.0 Status:** Current version includes 21 peptides (15 ordered, 6 discussed) and 15 stacks with the interactive calculator feature.
+7. **Version 2.0 Status:** Current version includes 21 peptides (15 ordered, 6 of interest) and 15 stacks with the interactive calculator feature.
 
 ## Troubleshooting
 

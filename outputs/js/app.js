@@ -20,7 +20,7 @@ window.APP.App = function App() {
 
   // Calculate counts for Header and Footer
   const orderedCount = Object.values(PEPTIDES_DATA).filter(p => p.ordered).length;
-  const discussedCount = Object.values(PEPTIDES_DATA).filter(p => !p.ordered).length;
+  const ofInterestCount = Object.values(PEPTIDES_DATA).filter(p => !p.ordered).length;
   const peptidesCount = Object.keys(PEPTIDES_DATA).length;
   const stacksCount = Object.keys(STACKS_DATA).length;
 
@@ -66,14 +66,14 @@ window.APP.App = function App() {
 
   return window.html`
     <div className="min-h-screen">
-      <${Header} orderedCount=${orderedCount} discussedCount=${discussedCount} />
+      <${Header} orderedCount=${orderedCount} ofInterestCount=${ofInterestCount} />
       <${Nav} view=${view} setView=${setView}
               peptidesCount=${peptidesCount}
               stacksCount=${stacksCount} />
       <main className="max-w-7xl mx-auto px-4 py-8">
         ${renderView()}
       </main>
-      <${Footer} orderedCount=${orderedCount} discussedCount=${discussedCount} />
+      <${Footer} orderedCount=${orderedCount} ofInterestCount=${ofInterestCount} />
     </div>
   `;
 };

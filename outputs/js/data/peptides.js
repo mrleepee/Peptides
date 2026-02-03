@@ -23,7 +23,7 @@ window.APP.PEPTIDES_DATA = {
     "accessibility": "Prescription required (FDA-approved)",
     "cost_tier": "high",
     "ordered": false,
-    "order_status": "Discussed but not ordered"
+    "order_status": "Of Interest but not ordered"
   },
   "ipamorelin": {
     "id": "ipamorelin",
@@ -266,7 +266,7 @@ window.APP.PEPTIDES_DATA = {
     "accessibility": "Research peptide (bioregulator suppliers)",
     "cost_tier": "medium",
     "ordered": false,
-    "order_status": "Discussed but not ordered",
+    "order_status": "Of Interest but not ordered",
     "special_notes": "HIGHLY RELEVANT - Directly addresses beta cell support and insulin resistance goals. Pairs excellently with MOTS-c for comprehensive metabolic protocol"
   },
   "cortagen": {
@@ -295,7 +295,7 @@ window.APP.PEPTIDES_DATA = {
     "accessibility": "Research peptide (bioregulator suppliers)",
     "cost_tier": "low",
     "ordered": false,
-    "order_status": "Discussed but not ordered",
+    "order_status": "Of Interest but not ordered",
     "special_notes": "Complements Pinealon for comprehensive brain support - Pinealon for circadian/pineal, Cortagen for cognitive performance. Often cycled together"
   },
   "chonluten": {
@@ -325,7 +325,7 @@ window.APP.PEPTIDES_DATA = {
     "accessibility": "Research peptide (bioregulator suppliers)",
     "cost_tier": "low",
     "ordered": false,
-    "order_status": "Discussed but not ordered",
+    "order_status": "Of Interest but not ordered",
     "special_notes": "Bronchial bioregulator with demonstrated anti-inflammatory effects. Published research (Int. J. Mol. Sci. 2022) shows it reduces TNF and pro-inflammatory cytokine expression in immune cells"
   },
   "livagen": {
@@ -354,7 +354,7 @@ window.APP.PEPTIDES_DATA = {
     "accessibility": "Research peptide (bioregulator suppliers)",
     "cost_tier": "medium",
     "ordered": false,
-    "order_status": "Discussed but not ordered",
+    "order_status": "Of Interest but not ordered",
     "special_notes": "Pairs excellently with Pancragen for complete metabolic organ support (liver + pancreas). Important for metabolic health and aging"
   },
   "thymulin": {
@@ -409,7 +409,7 @@ window.APP.PEPTIDES_DATA = {
     "accessibility": "Research peptide",
     "cost_tier": "low",
     "ordered": false,
-    "order_status": "Discussed but not ordered"
+    "order_status": "Of Interest but not ordered"
   },
   "semax": {
     "id": "semax",

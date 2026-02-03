@@ -21,7 +21,7 @@
     "accessibility": "Prescription required (FDA-approved)",
     "cost_tier": "high",
     "ordered": false,
-    "order_status": "Discussed but not ordered"
+    "order_status": "Of Interest but not ordered"
   },
   "ipamorelin": {
     "id": "ipamorelin",
@@ -290,7 +290,7 @@
     "accessibility": "Research peptide",
     "cost_tier": "low",
     "ordered": false,
-    "order_status": "Discussed but not ordered"
+    "order_status": "Of Interest but not ordered"
   },
   "semax": {
     "id": "semax",
@@ -401,7 +401,7 @@
     "accessibility": "Research peptide (bioregulator suppliers)",
     "cost_tier": "medium",
     "ordered": false,
-    "order_status": "Discussed but not ordered",
+    "order_status": "Of Interest but not ordered",
     "special_notes": "HIGHLY RELEVANT - Directly addresses beta cell support and insulin resistance goals. Pairs excellently with MOTS-c for comprehensive metabolic protocol"
   },
   "cortagen": {
@@ -430,7 +430,7 @@
     "accessibility": "Research peptide (bioregulator suppliers)",
     "cost_tier": "low",
     "ordered": false,
-    "order_status": "Discussed but not ordered",
+    "order_status": "Of Interest but not ordered",
     "special_notes": "Complements Pinealon for comprehensive brain support - Pinealon for circadian/pineal, Cortagen for cognitive performance. Often cycled together"
   },
   "chonluten": {
@@ -459,7 +459,7 @@
     "accessibility": "Research peptide (bioregulator suppliers)",
     "cost_tier": "low",
     "ordered": false,
-    "order_status": "Discussed but not ordered",
+    "order_status": "Of Interest but not ordered",
     "special_notes": "Complements BPC-157 for gut healing - BPC-157 is broad-spectrum gut repair, Chonluten is colon-specific bioregulator. Useful for SIBO recovery and lower GI issues"
   },
   "livagen": {
@@ -488,7 +488,7 @@
     "accessibility": "Research peptide (bioregulator suppliers)",
     "cost_tier": "medium",
     "ordered": false,
-    "order_status": "Discussed but not ordered",
+    "order_status": "Of Interest but not ordered",
     "special_notes": "Pairs excellently with Pancragen for complete metabolic organ support (liver + pancreas). Important for metabolic health and aging"
   }
 }

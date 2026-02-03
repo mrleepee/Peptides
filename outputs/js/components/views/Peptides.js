@@ -21,12 +21,12 @@ window.APP.Peptides = function Peptides({ navigate }) {
     const matchesCategory = filterCategory === 'all' || peptide.category === filterCategory;
     const matchesOrderStatus = filterOrderStatus === 'all' ||
       (filterOrderStatus === 'ordered' && peptide.ordered) ||
-      (filterOrderStatus === 'discussed' && !peptide.ordered);
+      (filterOrderStatus === 'ofInterest' && !peptide.ordered);
     return matchesSearch && matchesCategory && matchesOrderStatus;
   });
 
   const orderedCount = Object.values(PEPTIDES_DATA).filter(p => p.ordered).length;
-  const discussedCount = Object.values(PEPTIDES_DATA).filter(p => !p.ordered).length;
+  const ofInterestCount = Object.values(PEPTIDES_DATA).filter(p => !p.ordered).length;
 
   return window.html`
     <div>
@@ -50,9 +50,9 @@ window.APP.Peptides = function Peptides({ navigate }) {
                     className=${`px-4 py-2 rounded-lg ${filterOrderStatus === 'ordered' ? 'bg-green-600 text-white' : 'bg-gray-200'}`}>
               Ordered (${orderedCount})
             </button>
-            <button onClick=${() => setFilterOrderStatus('discussed')}
-                    className=${`px-4 py-2 rounded-lg ${filterOrderStatus === 'discussed' ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}>
-              Discussed (${discussedCount})
+            <button onClick=${() => setFilterOrderStatus('ofInterest')}
+                    className=${`px-4 py-2 rounded-lg ${filterOrderStatus === 'ofInterest' ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}>
+              Of Interest (${ofInterestCount})
             </button>
           </div>
         </div>
@@ -83,7 +83,7 @@ window.APP.Peptides = function Peptides({ navigate }) {
               <div className="flex flex-col gap-1">
                 ${peptide.ordered
                   ? window.html`<span className="ordered-badge badge">ORDERED</span>`
-                  : window.html`<span className="discussed-badge badge">DISCUSSED</span>`
+                  : window.html`<span className="of-interest-badge badge">OF INTEREST</span>`
                 }
                 <span className="badge ${getCostColor(peptide.cost_tier)}">
                   ${peptide.cost_tier}

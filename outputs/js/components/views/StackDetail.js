@@ -31,7 +31,7 @@ window.APP.StackDetail = function StackDetail({ stack, navigate }) {
               const p = PEPTIDES_DATA[pid];
               return window.html`
                 <span key=${pid}
-                      className=${`badge text-lg cursor-pointer ${p?.ordered ? 'ordered-badge' : 'discussed-badge'}`}
+                      className=${`badge text-lg cursor-pointer ${p?.ordered ? 'ordered-badge' : 'of-interest-badge'}`}
                       onClick=${() => navigate('peptide-detail', p)}>
                   ${p?.name}
                 </span>

@@ -24,7 +24,7 @@ window.APP.PeptideDetail = function PeptideDetail({ peptide, navigate }) {
           <div className="flex flex-col gap-2">
             ${peptide.ordered
               ? window.html`<span className="ordered-badge badge text-lg">ORDERED</span>`
-              : window.html`<span className="discussed-badge badge text-lg">DISCUSSED ONLY</span>`
+              : window.html`<span className="of-interest-badge badge text-lg">OF INTEREST</span>`
             }
             <span className="badge text-lg ${getCostColor(peptide.cost_tier)}">
               ${peptide.cost_tier} cost

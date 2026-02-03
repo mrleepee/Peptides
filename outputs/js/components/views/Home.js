@@ -8,7 +8,7 @@ var { getCostColor } = window.APP.helpers;
 // Register the component on window.APP
 window.APP.Home = function Home({ navigate }) {
   const orderedCount = Object.values(PEPTIDES_DATA).filter(p => p.ordered).length;
-  const discussedCount = Object.values(PEPTIDES_DATA).filter(p => !p.ordered).length;
+  const ofInterestCount = Object.values(PEPTIDES_DATA).filter(p => !p.ordered).length;
 
   return window.html`
     <div>
@@ -23,7 +23,7 @@ window.APP.Home = function Home({ navigate }) {
             <p className="text-gray-600">Peptides you purchased</p>
           </div>
           <div className="bg-purple-50 p-6 rounded-lg border-2 border-purple-200">
-            <h3 className="text-2xl font-bold text-purple-800 mb-2">${discussedCount} Discussed</h3>
+            <h3 className="text-2xl font-bold text-purple-800 mb-2">${ofInterestCount} Of Interest</h3>
             <p className="text-gray-600">For future consideration</p>
           </div>
           <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
@@ -56,14 +56,14 @@ window.APP.Home = function Home({ navigate }) {
         </div>
       </div>
 
-      <h3 className="text-2xl font-bold text-gray-800 mb-4">Discussed for Future</h3>
+      <h3 className="text-2xl font-bold text-gray-800 mb-4">Of Interest for Future</h3>
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         ${Object.values(PEPTIDES_DATA).filter(p => !p.ordered).map(peptide => window.html`
           <div key=${peptide.id} className="card bg-white rounded-lg shadow-md p-4 cursor-pointer border-2 border-purple-200"
                onClick=${() => navigate('peptide-detail', peptide)}>
             <div className="flex items-center justify-between mb-2">
               <h4 className="text-sm font-bold text-gray-800">${peptide.name}</h4>
-              <span className="discussed-badge badge text-xs">DISCUSSED</span>
+              <span className="of-interest-badge badge text-xs">OF INTEREST</span>
             </div>
             <p className="text-xs text-gray-600">${peptide.category}</p>
           </div>

@@ -191,7 +191,7 @@ print(bpc['primary_benefits'])
 
 - **Responsive Design** - Works on desktop, tablet, and mobile
 - **Search & Filter** - Find peptides by name, category, or type
-- **Order Status Tracking** - Visual indicators for ordered vs discussed peptides
+- **Order Status Tracking** - Visual indicators for ordered vs peptides of interest
 - **Cost Tier Labels** - Low/medium/high cost indicators
 - **Interactive Navigation** - Smooth transitions between views
 - **Detailed Protocols** - Complete dosing and timing information

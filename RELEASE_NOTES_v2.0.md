@@ -82,7 +82,7 @@ Added 3 missing ordered peptides with full scientific documentation:
 ### Peptide Inventory
 - **Total**: 21 peptides
 - **Ordered**: 15 peptides
-- **Discussed**: 6 peptides
+- **Of Interest**: 6 peptides
 
 ### Ordered Peptides Ready to Use:
 1. BPC-157 (6 vials)
@@ -104,7 +104,7 @@ Added 3 missing ordered peptides with full scientific documentation:
 ### Protocol Stacks
 - **Total**: 15 stacks
 - **All Ordered**: 6 stacks (ready to run immediately)
-- **Partial**: 9 stacks (contain some discussed peptides)
+- **Partial**: 9 stacks (contain some peptides of interest)
 
 ---
 

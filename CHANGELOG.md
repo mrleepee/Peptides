@@ -51,7 +51,7 @@ Added 3 missing ordered peptides with full scientific documentation:
 
 **Total Peptides:** 21
 - Ordered: 15
-- Discussed: 6
+- Of Interest: 6
 
 **Categories:**
 - Growth Hormone Optimization (3)
@@ -65,7 +65,7 @@ Added 3 missing ordered peptides with full scientific documentation:
 
 **Protocol Stacks:** 15
 - Fully ordered: 6
-- Contains discussed peptides: 9
+- Contains peptides of interest: 9
 
 ### 🐛 Bug Fixes
 

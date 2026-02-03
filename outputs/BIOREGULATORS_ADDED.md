@@ -1,8 +1,8 @@
-# 4 Bioregulators Added to App (Discussed)
+# 4 Bioregulators Added to App (Of Interest)
 
 ## ✅ What Was Added
 
-Added **4 Khavinson bioregulators** to the app as **"DISCUSSED"** peptides (not ordered yet, but recommended based on your goals).
+Added **4 Khavinson bioregulators** to the app as **"OF INTEREST"** peptides (not ordered yet, but recommended based on your goals).
 
 ## 🆕 New Peptides
 
@@ -138,9 +138,9 @@ Added **4 Khavinson bioregulators** to the app as **"DISCUSSED"** peptides (not 
 
 **Total Peptides:** 18 (was 14)
 - **Ordered:** 12
-- **Discussed:** 6
+- **Of Interest:** 6
 
-**Discussed peptides now:**
+**Peptides of interest now:**
 1. Tesamorelin (GHRH - alternative to Mod GRF)
 2. Selank (Anxiolytic - companion to Semax)
 3. **Pancragen** ⭐ NEW
@@ -235,12 +235,12 @@ Added **4 Khavinson bioregulators** to the app as **"DISCUSSED"** peptides (not 
 ## 💊 In the App
 
 ### **Home Page:**
-New section shows "💭 Discussed for Future" with purple borders:
+New section shows "💭 Of Interest for Future" with purple borders:
 - Pancragen, Cortagen, Chonluten, Livagen appear there
 
 ### **All Peptides Tab:**
-- Filter by "Discussed" to see just these 6
-- Purple "DISCUSSED" badges
+- Filter by "Of Interest" to see just these 6
+- Purple "OF INTEREST" badges
 - Click any to see full details
 
 ### **Dosing Guide Tab:**
@@ -261,10 +261,10 @@ All 4 have complete guides:
 
 ## 🎨 Visual Indicators in App
 
-**Discussed Peptides:**
-- 💭 Purple badges ("DISCUSSED")
+**Peptides of Interest:**
+- 💭 Purple badges ("OF INTEREST")
 - Purple borders on cards
-- "Discussed but not ordered" status
+- "Of Interest but not ordered" status
 - Separate section on home page
 
 **Ordered Peptides:**
@@ -302,7 +302,7 @@ All 4 have complete guides:
 ## 📱 How to View in App
 
 1. Open app
-2. Home page → See "💭 Discussed for Future" section
+2. Home page → See "💭 Of Interest for Future" section
 3. Click any bioregulator to see full details
 4. Go to "💊 Dosing Guide" tab
 5. Select bioregulator to see:
@@ -313,6 +313,6 @@ All 4 have complete guides:
 
 ---
 
-**Total: 18 peptides, 12 ordered, 6 discussed, 16 dosing guides, 6 stacks**
+**Total: 18 peptides, 12 ordered, 6 of interest, 16 dosing guides, 6 stacks**
 
 [Open updated app](computer:///sessions/wonderful-pensive-wright/mnt/outputs/peptide-protocols-app.html)
