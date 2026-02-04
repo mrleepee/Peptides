@@ -349,22 +349,22 @@
   },
   "modgrf129": {
     "id": "modgrf129",
-    "name": "Mod GRF 1-29 (CJC-1295 no DAC)",
+    "name": "CJC-1295 (Mod GRF 1-29)",
     "type": "GHRH Analogue",
     "category": "Growth Hormone",
-    "mechanism": "Modified GHRH (1-29) that stimulates pulsatile GH release without drug affinity complex (DAC). Provides natural GH pulse pattern",
+    "mechanism": "Modified GHRH (1-29) that stimulates pulsatile GH release. Provides natural GH pulse pattern without continuous elevation",
     "half_life": "~30 minutes",
     "dosing": "100-200mcg, 2-3x daily",
     "administration": "Subcutaneous injection",
     "primary_benefits": [
       "Stimulates natural GH release patterns",
-      "No DAC means more physiological pulsing",
+      "Physiological pulsing mimics natural secretion",
       "Synergistic with Ipamorelin",
       "Body composition improvement",
       "Visceral fat reduction",
       "Alternative to Tesamorelin"
     ],
-    "research_findings": "Modified growth hormone releasing hormone without the drug affinity complex. Provides more natural pulsatile GH release than CJC-1295 with DAC. Often stacked with Ipamorelin for enhanced GH output",
+    "research_findings": "Modified growth hormone releasing hormone (also called Mod GRF 1-29). Provides natural pulsatile GH release. Often stacked with Ipamorelin for enhanced GH output. Note: This is WITHOUT DAC (Drug Affinity Complex)",
     "system_targets": [
       "Endocrine",
       "Metabolic"
@@ -372,7 +372,7 @@
     "accessibility": "Research peptide, widely available",
     "cost_tier": "medium",
     "ordered": true,
-    "special_notes": "Best alternative to Tesamorelin when paired with Ipamorelin. The 'no DAC' version allows natural pulsing vs continuous elevation",
+    "special_notes": "Best alternative to Tesamorelin when paired with Ipamorelin. CJC-1295 without DAC allows natural pulsing. Not to be confused with CJC-1295 WITH DAC which has a much longer half-life and continuous GH elevation",
     "order_status": "Ordered and received"
   },
   "pancragen": {
@@ -490,5 +490,150 @@
     "ordered": false,
     "order_status": "Of Interest but not ordered",
     "special_notes": "Pairs excellently with Pancragen for complete metabolic organ support (liver + pancreas). Important for metabolic health and aging"
+  },
+  "ll37": {
+    "id": "ll37",
+    "name": "LL-37",
+    "type": "Antimicrobial Peptide",
+    "category": "Immune & Healing",
+    "mechanism": "Broad-spectrum antimicrobial activity against bacteria, viruses, and fungi. Modulates immune responses, promotes wound healing, and has anti-biofilm properties",
+    "half_life": "~6-8 hours",
+    "dosing": "200-500mcg daily or 2-3x weekly",
+    "administration": "Subcutaneous injection or topical",
+    "primary_benefits": [
+      "Antimicrobial and antiviral activity",
+      "Wound healing acceleration",
+      "Immune system modulation",
+      "Anti-inflammatory effects",
+      "Biofilm disruption",
+      "Skin barrier protection"
+    ],
+    "research_findings": "Human cathelicidin antimicrobial peptide, part of innate immune system. Shows broad-spectrum antimicrobial activity and wound healing properties. Being studied for chronic wounds, infections, and inflammatory conditions",
+    "system_targets": [
+      "Immune System",
+      "Skin",
+      "Wound Healing"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "high",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "dsip": {
+    "id": "dsip",
+    "name": "DSIP",
+    "type": "Neuropeptide",
+    "category": "Sleep & Recovery",
+    "mechanism": "Modulates sleep architecture by enhancing delta wave (slow-wave) sleep. Regulates HPA axis, stress hormones, and circadian rhythms. May have neuroprotective and analgesic properties",
+    "half_life": "~15-30 minutes (effects last hours)",
+    "dosing": "100-300mcg before bed or 2-3x daily for stress",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Enhanced deep sleep (delta wave)",
+      "Stress and cortisol modulation",
+      "Pain modulation and chronic pain relief",
+      "Neuroprotective effects",
+      "May help with withdrawal symptoms",
+      "Mood stabilization",
+      "Adaptogenic properties"
+    ],
+    "research_findings": "Discovered in 1977 from rabbit brain. Increases slow-wave sleep and modulates HPA axis. Shows promise for stress-related disorders, chronic pain, and insomnia. Some evidence for alcohol/opioid withdrawal support. Exhibits both sedative and stress-protective effects",
+    "system_targets": [
+      "Nervous System",
+      "Sleep",
+      "Stress Response",
+      "Pain Modulation"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "medium",
+    "ordered": true,
+    "order_status": "Ordered and received",
+    "special_notes": "Unique dual action: promotes sleep but also helps with daytime stress management. Excellent for recovery protocols. Pairs well with Epitalon and Pinealon for comprehensive sleep/circadian support"
+  },
+  "aod9604": {
+    "id": "aod9604",
+    "name": "AOD-9604",
+    "type": "Growth Hormone Fragment",
+    "category": "Metabolic & Fat Loss",
+    "mechanism": "Fragment 176-191 of human growth hormone. Stimulates lipolysis (fat breakdown) and inhibits lipogenesis (fat formation) without affecting blood sugar or IGF-1 levels",
+    "half_life": "~2 hours",
+    "dosing": "250-500mcg daily, typically split into 2 doses",
+    "administration": "Subcutaneous injection",
+    "primary_benefits": [
+      "Enhanced fat loss, especially abdominal fat",
+      "No effect on blood sugar or insulin",
+      "Does not affect IGF-1 levels",
+      "May promote cartilage repair",
+      "Improved body composition",
+      "Preserves lean muscle mass"
+    ],
+    "research_findings": "Originally developed as anti-obesity drug. Shows selective fat-reducing effects without the growth-promoting or blood sugar effects of full GH. Does not bind to GH receptors. Australian studies showed significant fat loss, particularly visceral fat",
+    "system_targets": [
+      "Metabolic",
+      "Adipose Tissue"
+    ],
+    "accessibility": "Research peptide",
+    "cost_tier": "medium",
+    "ordered": true,
+    "order_status": "Ordered and received"
+  },
+  "kisspeptin": {
+    "id": "kisspeptin",
+    "name": "Kisspeptin",
+    "type": "Neuropeptide Hormone",
+    "category": "Endocrine & Reproductive",
+    "mechanism": "Binds to GPR54 (KISS1R) receptor to stimulate GnRH secretion. Master regulator of hypothalamic-pituitary-gonadal axis. Controls puberty onset and reproductive function",
+    "half_life": "Short (minutes)",
+    "dosing": "Research doses vary, typically 10-100mcg via injection or nasal",
+    "administration": "Subcutaneous, intravenous, or intranasal",
+    "primary_benefits": [
+      "Regulates reproductive hormone production",
+      "May improve libido and sexual function",
+      "Metabolic regulation effects",
+      "Potential cancer suppression properties (KISS1 metastasis suppressor)",
+      "Modulates puberty and fertility"
+    ],
+    "research_findings": "Discovered as metastasis suppressor gene product. Critical for puberty initiation and reproductive function. Research ongoing for hypogonadism treatment, infertility, and potential anti-cancer applications. May have roles in energy balance and metabolism",
+    "system_targets": [
+      "Endocrine",
+      "Reproductive",
+      "Metabolic"
+    ],
+    "accessibility": "Research peptide (limited availability)",
+    "cost_tier": "high",
+    "ordered": false,
+    "order_status": "Of Interest but not ordered",
+    "special_notes": "Complex peptide with multiple potential applications beyond reproduction - metabolic effects, cancer research, and possible longevity connections through reproductive hormone modulation"
+  },
+  "humanin": {
+    "id": "humanin",
+    "name": "Humanin",
+    "type": "Mitochondrial-derived Peptide",
+    "category": "Longevity & Cytoprotection",
+    "mechanism": "24-amino-acid peptide encoded within mitochondrial 16S rRNA. Binds to specific receptors (formyl peptide receptor-like 1, GP130/WSX-1 complex). Cytoprotective signaling that inhibits apoptosis and oxidative stress",
+    "half_life": "Not well established",
+    "dosing": "Research stage - dosing still being established",
+    "administration": "Subcutaneous or intravenous (research)",
+    "primary_benefits": [
+      "Cellular protection against apoptosis",
+      "Neuroprotection (Alzheimer's, Parkinson's)",
+      "Cardiovascular protection",
+      "Metabolic regulation (insulin sensitivity)",
+      "Anti-inflammatory effects",
+      "Potential longevity extension"
+    ],
+    "research_findings": "Discovered in 2001 during screen for proteins that protect against Alzheimer's-related neuronal death. Humanin levels decline with age. Acts as a cytoprotective factor across multiple cell types. Research shows protection against A-beta toxicity, myocardial ischemia, and other age-related pathologies. May be a key longevity peptide",
+    "system_targets": [
+      "Cellular",
+      "Mitochondrial",
+      "Neurological",
+      "Cardiovascular",
+      "Metabolic"
+    ],
+    "accessibility": "Research peptide (very limited)",
+    "cost_tier": "high",
+    "ordered": false,
+    "order_status": "Of Interest but not ordered",
+    "special_notes": "HIGHLY RELEVANT for longevity - mitochondrial-derived peptide with broad cytoprotective effects. One of the most promising longevity peptides. Levels naturally decline with age. Research stage but highly significant potential"
   }
 }

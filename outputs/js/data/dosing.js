@@ -162,13 +162,13 @@ window.APP.DOSING_GUIDES = {
   "kpv": {
     "peptide_id": "kpv",
     "name": "KPV",
-    "vial_sizes": ["10mg"],
+    "vial_sizes": ["5mg"],
     "reconstitution": {
       "bac_water": "2mL",
-      "concentration": "5mg/mL (5000mcg/mL)",
+      "concentration": "2.5mg/mL (2500mcg/mL)",
       "units_per_dose": {
-        "500mcg": "0.1mL (10 units)",
-        "1000mcg": "0.2mL (20 units)"
+        "500mcg": "0.2mL (20 units)",
+        "1000mcg": "0.4mL (40 units)"
       }
     },
     "typical_dose_range": "500-1000mcg per dose, 1-2x daily",

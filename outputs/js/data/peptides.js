@@ -445,7 +445,7 @@ window.APP.PEPTIDES_DATA = {
     "category": "Anti-Inflammatory & Gut Health",
     "mechanism": "Downregulates NF-\u03baB and MAPK inflammatory signaling pathways. Transported by PepT1 (intestinal peptide transporter) suggesting direct gut tissue uptake",
     "half_life": "Short (minutes to hours)",
-    "dosing": "500-1000mcg daily, can be oral or subcutaneous",
+    "dosing": "500-1000mcg daily (5-10 doses from 5mg vial, reconstituted with 2mL BAC water), oral or subcutaneous",
     "administration": "Oral (for gut targeting) or subcutaneous",
     "primary_benefits": [
       "Downregulates inflammatory signaling (NF-\u03baB, MAPK)",
@@ -468,22 +468,22 @@ window.APP.PEPTIDES_DATA = {
   },
   "modgrf129": {
     "id": "modgrf129",
-    "name": "Mod GRF 1-29 (CJC-1295 no DAC)",
+    "name": "CJC-1295 (Mod GRF 1-29)",
     "type": "GHRH Analogue",
     "category": "Growth Hormone",
-    "mechanism": "Modified GHRH (1-29) that stimulates pulsatile GH release without drug affinity complex (DAC). Provides natural GH pulse pattern",
+    "mechanism": "Modified GHRH (1-29) that stimulates pulsatile GH release. Provides natural GH pulse pattern without continuous elevation",
     "half_life": "~30 minutes",
     "dosing": "100-200mcg, 2-3x daily",
     "administration": "Subcutaneous injection",
     "primary_benefits": [
       "Stimulates natural GH release patterns",
-      "No DAC means more physiological pulsing",
+      "Physiological pulsing mimics natural secretion",
       "Synergistic with Ipamorelin",
       "Body composition improvement",
       "Visceral fat reduction",
       "Alternative to Tesamorelin"
     ],
-    "research_findings": "Modified growth hormone releasing hormone without the drug affinity complex. Provides more natural pulsatile GH release than CJC-1295 with DAC. Often stacked with Ipamorelin for enhanced GH output",
+    "research_findings": "Modified growth hormone releasing hormone (also called Mod GRF 1-29). Provides natural pulsatile GH release. Often stacked with Ipamorelin for enhanced GH output. Note: This is WITHOUT DAC (Drug Affinity Complex)",
     "system_targets": [
       "Endocrine",
       "Metabolic"
@@ -491,7 +491,7 @@ window.APP.PEPTIDES_DATA = {
     "accessibility": "Research peptide, widely available",
     "cost_tier": "medium",
     "ordered": true,
-    "special_notes": "Best alternative to Tesamorelin when paired with Ipamorelin. The 'no DAC' version allows natural pulsing vs continuous elevation",
+    "special_notes": "Best alternative to Tesamorelin when paired with Ipamorelin. CJC-1295 without DAC allows natural pulsing. Not to be confused with CJC-1295 WITH DAC which has a much longer half-life and continuous GH elevation",
     "order_status": "Ordered and received"
   },
   "ll37": {
@@ -579,5 +579,64 @@ window.APP.PEPTIDES_DATA = {
     "cost_tier": "medium",
     "ordered": true,
     "order_status": "Ordered and received"
+  },
+  "kisspeptin": {
+    "id": "kisspeptin",
+    "name": "Kisspeptin",
+    "type": "Neuropeptide Hormone",
+    "category": "Endocrine & Reproductive",
+    "mechanism": "Binds to GPR54 (KISS1R) receptor to stimulate GnRH secretion. Master regulator of hypothalamic-pituitary-gonadal axis. Controls puberty onset and reproductive function",
+    "half_life": "Short (minutes)",
+    "dosing": "Research doses vary, typically 10-100mcg via injection or nasal",
+    "administration": "Subcutaneous, intravenous, or intranasal",
+    "primary_benefits": [
+      "Regulates reproductive hormone production",
+      "May improve libido and sexual function",
+      "Metabolic regulation effects",
+      "Potential cancer suppression properties (KISS1 metastasis suppressor)",
+      "Modulates puberty and fertility"
+    ],
+    "research_findings": "Discovered as metastasis suppressor gene product. Critical for puberty initiation and reproductive function. Research ongoing for hypogonadism treatment, infertility, and potential anti-cancer applications. May have roles in energy balance and metabolism",
+    "system_targets": [
+      "Endocrine",
+      "Reproductive",
+      "Metabolic"
+    ],
+    "accessibility": "Research peptide (limited availability)",
+    "cost_tier": "high",
+    "ordered": false,
+    "order_status": "Of Interest but not ordered",
+    "special_notes": "Complex peptide with multiple potential applications beyond reproduction - metabolic effects, cancer research, and possible longevity connections through reproductive hormone modulation"
+  },
+  "humanin": {
+    "id": "humanin",
+    "name": "Humanin",
+    "type": "Mitochondrial-derived Peptide",
+    "category": "Longevity & Cytoprotection",
+    "mechanism": "24-amino-acid peptide encoded within mitochondrial 16S rRNA. Binds to specific receptors (formyl peptide receptor-like 1, GP130/WSX-1 complex). Cytoprotective signaling that inhibits apoptosis and oxidative stress",
+    "half_life": "Not well established",
+    "dosing": "Research stage - dosing still being established",
+    "administration": "Subcutaneous or intravenous (research)",
+    "primary_benefits": [
+      "Cellular protection against apoptosis",
+      "Neuroprotection (Alzheimer's, Parkinson's)",
+      "Cardiovascular protection",
+      "Metabolic regulation (insulin sensitivity)",
+      "Anti-inflammatory effects",
+      "Potential longevity extension"
+    ],
+    "research_findings": "Discovered in 2001 during screen for proteins that protect against Alzheimer's-related neuronal death. Humanin levels decline with age. Acts as a cytoprotective factor across multiple cell types. Research shows protection against A-beta toxicity, myocardial ischemia, and other age-related pathologies. May be a key longevity peptide",
+    "system_targets": [
+      "Cellular",
+      "Mitochondrial",
+      "Neurological",
+      "Cardiovascular",
+      "Metabolic"
+    ],
+    "accessibility": "Research peptide (very limited)",
+    "cost_tier": "high",
+    "ordered": false,
+    "order_status": "Of Interest but not ordered",
+    "special_notes": "HIGHLY RELEVANT for longevity - mitochondrial-derived peptide with broad cytoprotective effects. One of the most promising longevity peptides. Levels naturally decline with age. Research stage but highly significant potential"
   }
 };

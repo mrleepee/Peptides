@@ -188,8 +188,16 @@ window.APP.Calculator = function Calculator() {
               onClick=${() => { setVialSize(5); setBacWater(2); setTargetDose(500); }}
               className="bg-gradient-to-br from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
             >
-              <div className="text-lg mb-2">KPV</div>
+              <div className="text-lg mb-2">KPV (500mcg)</div>
               <div className="text-xs opacity-90">5mg • 2mL • 500mcg</div>
+            </button>
+
+            <button
+              onClick=${() => { setVialSize(5); setBacWater(2); setTargetDose(1000); }}
+              className="bg-gradient-to-br from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white font-bold py-4 px-4 rounded-lg shadow-md transition-all transform hover:scale-105"
+            >
+              <div className="text-lg mb-2">KPV (1000mcg)</div>
+              <div className="text-xs opacity-90">5mg • 2mL • 1000mcg</div>
             </button>
 
             <button

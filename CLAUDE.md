@@ -110,6 +110,37 @@ All data is sourced from `outputs/peptide_protocols/`:
 - Event handlers: `onClick=${() => handler()}`
 - Maps: `` ${arr.map(x => window.html`<div key=${x.id}>...</div>`)} ``
 
+## Data Update Checklist (IMPORTANT!)
+
+**When modifying ANY peptide data, you must update ALL of the following files:**
+
+1. **For peptide changes** (name, dosing, vial size, etc.):
+   - `outputs/js/data/peptides.js` - PEPTIDES_DATA object
+   - `outputs/peptide_protocols/peptides_database.json` - Source database
+   - `outputs/peptide_protocols/peptides/[peptide_id].json` - Individual peptide file
+   - `outputs/js/data/dosing.js` - DOSING_GUIDES object (if dosing/vial info changed)
+
+2. **For dosing guide changes** (vial sizes, reconstitution info):
+   - `outputs/js/data/dosing.js` - DOSING_GUIDES object
+   - `outputs/peptide_protocols/dosing_guides.json` - Source file (if it exists)
+
+3. **For stack changes**:
+   - `outputs/js/data/stacks.js` - STACKS_DATA object
+   - `outputs/peptide_protocols/stacks_database.json` - Source database
+   - `outputs/peptide_protocols/stacks/[stack_id].json` - Individual stack file
+
+4. **For scientific article changes**:
+   - `outputs/js/data/articles.js` - ARTICLES_DATA object
+   - (No JSON source for articles currently - manual curation only)
+
+**Common mistake:** Updating only the JS files but forgetting the JSON source files, or vice versa. This causes data drift.
+
+**Verification:** After making changes, refresh the browser and verify the data displays correctly in:
+- Peptides list view
+- Peptide detail page
+- Dosing guides view
+- Calculator presets (if vial/dosing changed)
+
 ## Data Schemas
 
 ### Peptide Object
