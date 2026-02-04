@@ -9,6 +9,8 @@ var { getCostColor } = window.APP.helpers;
 window.APP.PeptideDetail = function PeptideDetail({ peptide, navigate }) {
   if (!peptide) return window.html`<div>No peptide selected</div>`;
 
+  var hasCitations = window.APP.CITATIONS_DATA && window.APP.CITATIONS_DATA[peptide.id];
+
   return window.html`
     <div>
       <button onClick=${() => navigate('peptides')}
@@ -208,6 +210,8 @@ window.APP.PeptideDetail = function PeptideDetail({ peptide, navigate }) {
             })()}
           </div>
         `}
+
+        ${hasCitations ? window.APP.ResearchCitations({ peptide: peptide }) : ''}
       </div>
     </div>
   `;
