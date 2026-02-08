@@ -22,13 +22,16 @@
 
 ## PubMed Citations for New Peptides
 
-**Status:** Available but excluded
+**Status:** Mixed availability
 
-**Issue:** PubMed citation data exists for Kisspeptin and Humanin but was intentionally excluded from the citations integration due to large dataset sizes and potential quality concerns.
+**Issue:** PubMed citation data exists for some new peptides but was intentionally excluded from the citations integration due to large dataset sizes and potential quality concerns.
 
 **Available data:**
-- `pubmed_citations/19_Humanin.csv` - 27,080 citations
-- `pubmed_citations/20_Kisspeptin.csv` - 3,736 citations
+- `pubmed_citations/19_Humanin.csv` - 27,080 citations (excluded)
+- `pubmed_citations/20_Kisspeptin.csv` - 3,736 citations (excluded)
+
+**No data available:**
+- **SS-31 (Elamipretide)** - No PubMed citations CSV file exists. Would need to be scraped from PubMed.
 
 **Why excluded:** Large datasets may include false positives (generic search results rather than specific peptide research)
 
@@ -37,8 +40,11 @@
 2. Add with data quality warning note in UI
 3. Leave without citations until data can be curated
 4. Manually review and curate subset of most relevant citations
+5. For SS-31: Run PubMed search for "elamipretide OR SS-31 OR bendavia" and generate citations CSV
 
-**Action needed:** Decide whether to include large citation datasets for Kisspeptin and Humanin
+**Action needed:**
+- Decide whether to include large citation datasets for Kisspeptin and Humanin
+- Decide whether to generate PubMed citations for SS-31
 
 ---
 
