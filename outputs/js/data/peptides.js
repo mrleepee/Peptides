@@ -638,5 +638,36 @@ window.APP.PEPTIDES_DATA = {
     "ordered": false,
     "order_status": "Of Interest but not ordered",
     "special_notes": "HIGHLY RELEVANT for longevity - mitochondrial-derived peptide with broad cytoprotective effects. One of the most promising longevity peptides. Levels naturally decline with age. Research stage but highly significant potential"
+  },
+  "ss31": {
+    "id": "ss31",
+    "name": "SS-31",
+    "type": "Mitochondrial-targeting Tetrapeptide",
+    "category": "Longevity & Mitochondrial Health",
+    "mechanism": "Selective mitochondrial targeting via alternating aromatic-cationic residues. Binds to cardiolipin in inner mitochondrial membrane, stabilizing cristae structure and improving electron transport chain efficiency. Reduces mitochondrial ROS production and inhibits mPTP opening",
+    "half_life": "~2-4 hours (subcutaneous)",
+    "dosing": "Research doses typically 1-10mg daily via subcutaneous injection",
+    "administration": "Subcutaneous or intravenous",
+    "primary_benefits": [
+      "Enhances mitochondrial ATP production",
+      "Reduces oxidative stress and ROS",
+      "Cardioprotection (ischemia-reperfusion injury)",
+      "Neuroprotection",
+      "Improves muscle function and exercise capacity",
+      "Potential anti-aging effects"
+    ],
+    "research_findings": "Developed as elamipretide (also known as SS-31 or Bendavia). Phase 2/3 trials for mitochondrial myopathy, primary mitochondrial diseases, and age-related conditions. Shows promise for heart failure, macular degeneration, and neurodegenerative diseases. Improves mitochondrial efficiency and reduces oxidative damage",
+    "system_targets": [
+      "Mitochondrial",
+      "Cardiovascular",
+      "Neurological",
+      "Muscular",
+      "Metabolic"
+    ],
+    "accessibility": "Research peptide (limited availability)",
+    "cost_tier": "high",
+    "ordered": false,
+    "order_status": "Of Interest but not ordered",
+    "special_notes": "One of the most clinically advanced mitochondrial peptides. Multiple human trials completed. Particularly promising for age-related mitochondrial decline and cardiovascular conditions. Commercial development ongoing by Stealth BioTherapeutics"
   }
 };
