@@ -1,0 +1,57 @@
+{
+  "id": "phase3_option_b_klow",
+  "name": "Phase 3 Option B: Enhanced Repair (Klow Blend Alternative)",
+  "peptides": [
+    "bpc157",
+    "tb500",
+    "ghkcu",
+    "kpv"
+  ],
+  "primary_goals": [
+    "Persistent SIBO/gut inflammation",
+    "Systemic tissue repair",
+    "Skin/aesthetic benefits",
+    "Enhanced anti-inflammatory"
+  ],
+  "mechanism": "BPC-157 for gut repair, KPV for inflammatory signaling, TB-500 for systemic cell migration, GHK-Cu for collagen/tissue remodeling. Addresses multiple repair pathways simultaneously",
+  "protocol": {
+    "bpc157": {
+      "dose": "250-500mcg",
+      "frequency": "2x daily",
+      "administration": "Injectable or oral",
+      "timing": "Morning and evening"
+    },
+    "kpv": {
+      "dose": "500-1000mcg",
+      "frequency": "1-2x daily",
+      "administration": "Oral or subcutaneous",
+      "timing": "With or separate from BPC-157"
+    },
+    "tb500": {
+      "dose": "2-5mg",
+      "frequency": "1-2x weekly",
+      "administration": "Subcutaneous or intramuscular",
+      "timing": "Flexible"
+    },
+    "ghkcu": {
+      "dose": "1-3mg weekly (injectable) or topical daily",
+      "frequency": "Weekly for injectable",
+      "administration": "Subcutaneous or topical",
+      "timing": "Flexible"
+    }
+  },
+  "phase": "Phase 3 - Optional",
+  "duration": "If gut inflammation persists after Phase 1",
+  "cycling": "4-8 weeks for acute issues, longer for chronic",
+  "cost_estimate": "$180-220/month",
+  "synergy_notes": "This is the 'Klow Blend' approach - comprehensive repair stack. Use if gut issues don't fully resolve with BPC-157 alone",
+  "considerations": [
+    "GHK-Cu provides aesthetic benefits but not essential for gut goals",
+    "KPV is the key addition if BPC-157 alone insufficient",
+    "TB-500 adds systemic repair layer",
+    "More expensive per mg than buying BPC-157 standalone"
+  ],
+  "ordered": true,
+  "stack_status": "All peptides ordered",
+  "conversation_tier": "Phase 3 Option B - Persistent Gut Issues"
+}

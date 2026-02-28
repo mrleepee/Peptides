@@ -1,0 +1,29 @@
+{
+  "id": "aesthetic",
+  "name": "Aesthetic Enhancement",
+  "peptides": [
+    "ghkcu"
+  ],
+  "primary_goals": [
+    "Skin rejuvenation",
+    "Collagen synthesis",
+    "Wound healing",
+    "Hair growth",
+    "Anti-aging appearance"
+  ],
+  "mechanism": "GHK-Cu modulates over 4,000 genes involved in tissue remodeling, collagen synthesis, and inflammation reduction",
+  "protocol": {
+    "ghkcu": {
+      "dose_topical": "Apply 1-2x daily to target areas",
+      "dose_injectable": "1-3mg weekly",
+      "administration": "Topical for skin, subcutaneous for systemic effects"
+    }
+  },
+  "cycling": "Can use continuously. Injectable: consider 3 months on, 1 month off",
+  "considerations": [
+    "Topical for facial/skin benefits",
+    "Injectable for systemic collagen and healing",
+    "Copper content requires attention if supplementing copper separately"
+  ],
+  "stack_status": "All peptides ordered"
+}

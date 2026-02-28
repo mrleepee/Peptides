@@ -1,0 +1,24 @@
+{
+  "id": "retatrutide",
+  "name": "Retatrutide",
+  "type": "Triple Agonist",
+  "category": "Metabolic & Weight Management",
+  "mechanism": "Triple agonist of GIP, GLP-1, and glucagon receptors. Comprehensive metabolic regulation",
+  "half_life": "~7 days",
+  "dosing": "Escalating protocol, typically 2-12mg weekly",
+  "administration": "Subcutaneous injection",
+  "primary_benefits": [
+    "Significant weight loss",
+    "Improved metabolic health",
+    "Better glycemic control",
+    "Reduced appetite",
+    "Enhanced fat oxidation"
+  ],
+  "research_findings": "Clinical trials showed superior weight loss compared to dual agonists. Phase 3 trials ongoing",
+  "system_targets": [
+    "Metabolic",
+    "Endocrine"
+  ],
+  "accessibility": "Research/prescription",
+  "cost_tier": "high"
+}

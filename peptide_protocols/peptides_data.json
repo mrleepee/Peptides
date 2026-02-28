@@ -1,0 +1,110 @@
+{
+  "tesamorelin": {
+    "id": "tesamorelin",
+    "name": "Tesamorelin",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "ipamorelin": {
+    "id": "ipamorelin",
+    "name": "Ipamorelin",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "bpc157": {
+    "id": "bpc157",
+    "name": "BPC-157",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "tb500": {
+    "id": "tb500",
+    "name": "TB-500",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "ghkcu": {
+    "id": "ghkcu",
+    "name": "GHK-Cu",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "motsc": {
+    "id": "motsc",
+    "name": "MOTS-c",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "retatrutide": {
+    "id": "retatrutide",
+    "name": "Retatrutide",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "pinealon": {
+    "id": "pinealon",
+    "name": "Pinealon",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "epitalon": {
+    "id": "epitalon",
+    "name": "Epitalon",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "thymulin": {
+    "id": "thymulin",
+    "name": "Thymulin",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "selank": {
+    "id": "selank",
+    "name": "Selank",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  },
+  "semax": {
+    "id": "semax",
+    "name": "Semax",
+    "mechanism": "",
+    "half_life": "",
+    "dosing": "",
+    "research_findings": "",
+    "properties": []
+  }
+}

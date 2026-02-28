@@ -1,0 +1,27 @@
+{
+  "id": "tb500",
+  "name": "TB-500",
+  "type": "Thymosin Beta-4 Fragment",
+  "category": "Repair & Recovery",
+  "mechanism": "Sequesters G-actin, promoting cell migration and proliferation. Upregulates actin polymerization. Reduces inflammation via NF-\u03baB modulation",
+  "half_life": "~10 days (due to actin binding)",
+  "dosing": "2-5mg, 1-2x weekly",
+  "administration": "Subcutaneous or intramuscular injection",
+  "primary_benefits": [
+    "Tissue repair and regeneration",
+    "Wound healing",
+    "Reduced inflammation",
+    "Hair regrowth",
+    "Cardiac tissue repair"
+  ],
+  "research_findings": "43-amino-acid peptide naturally occurring in most tissues. Research includes cardiac post-MI studies, wound healing, corneal repair",
+  "system_targets": [
+    "Musculoskeletal",
+    "Cardiovascular",
+    "Integumentary"
+  ],
+  "accessibility": "Research peptide",
+  "cost_tier": "medium",
+  "ordered": true,
+  "order_status": "Ordered and received"
+}

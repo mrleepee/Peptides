@@ -1,0 +1,25 @@
+{
+  "id": "semax",
+  "name": "Semax",
+  "type": "Nootropic",
+  "category": "Cognitive Enhancement",
+  "mechanism": "BDNF expression, NGF modulation, dopaminergic and serotonergic system enhancement, neuroprotection",
+  "half_life": "~30 minutes (effects last hours)",
+  "dosing": "300-600mcg, 1-3x daily",
+  "administration": "Intranasal",
+  "primary_benefits": [
+    "Enhanced focus and concentration",
+    "Memory improvement",
+    "Neuroprotection",
+    "Mood elevation",
+    "Reduced cognitive fatigue",
+    "Stress adaptation"
+  ],
+  "research_findings": "ACTH(4-10) analog. Developed in Russia. Well-studied for cognitive enhancement and neuroprotection",
+  "system_targets": [
+    "Neurological",
+    "Cognitive"
+  ],
+  "accessibility": "Research peptide",
+  "cost_tier": "low"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "modgrf129",
+  "name": "CJC-1295 (Mod GRF 1-29)",
+  "type": "GHRH Analogue",
+  "category": "Growth Hormone",
+  "mechanism": "Modified GHRH (1-29) that stimulates pulsatile GH release. Provides natural GH pulse pattern without continuous elevation",
+  "half_life": "~30 minutes",
+  "dosing": "100-200mcg, 2-3x daily",
+  "administration": "Subcutaneous injection",
+  "primary_benefits": [
+    "Stimulates natural GH release patterns",
+    "Physiological pulsing mimics natural secretion",
+    "Synergistic with Ipamorelin",
+    "Body composition improvement",
+    "Visceral fat reduction",
+    "Alternative to Tesamorelin"
+  ],
+  "research_findings": "Modified growth hormone releasing hormone (also called Mod GRF 1-29). Provides natural pulsatile GH release. Often stacked with Ipamorelin for enhanced GH output. Note: This is WITHOUT DAC (Drug Affinity Complex)",
+  "system_targets": [
+    "Endocrine",
+    "Metabolic"
+  ],
+  "accessibility": "Research peptide, widely available",
+  "cost_tier": "medium",
+  "special_notes": "Best alternative to Tesamorelin when paired with Ipamorelin. CJC-1295 without DAC allows natural pulsing. Not to be confused with CJC-1295 WITH DAC which has a much longer half-life and continuous GH elevation",
+  "order_status": "Ordered and received"
+}

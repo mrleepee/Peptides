@@ -1,0 +1,59 @@
+{
+  "stacks": [
+    {
+      "id": "gh_foundation",
+      "name": "Growth Hormone Foundation Stack",
+      "peptides": [
+        "tesamorelin",
+        "ipamorelin"
+      ],
+      "purpose": "GH optimization, body composition, recovery"
+    },
+    {
+      "id": "repair_resilience",
+      "name": "Repair & Resilience Stack",
+      "peptides": [
+        "bpc157",
+        "tb500"
+      ],
+      "purpose": "Tissue repair, injury recovery, inflammation modulation"
+    },
+    {
+      "id": "aesthetic",
+      "name": "Aesthetic Enhancement",
+      "peptides": [
+        "ghkcu"
+      ],
+      "purpose": "Skin health, collagen synthesis, wound healing"
+    },
+    {
+      "id": "metabolic",
+      "name": "Energy & Metabolic Control Stack",
+      "peptides": [
+        "motsc",
+        "retatrutide"
+      ],
+      "purpose": "Mitochondrial function, metabolic optimization, weight management"
+    },
+    {
+      "id": "longevity",
+      "name": "Longevity & Cellular Health",
+      "peptides": [
+        "pinealon",
+        "epitalon",
+        "thymulin"
+      ],
+      "purpose": "Cellular repair, telomere support, immune function"
+    },
+    {
+      "id": "cognitive",
+      "name": "Cognitive Enhancement",
+      "peptides": [
+        "selank",
+        "semax"
+      ],
+      "purpose": "Neuroprotection, focus, anxiety modulation"
+    }
+  ],
+  "peptides": {}
+}

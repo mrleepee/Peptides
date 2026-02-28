@@ -1,0 +1,27 @@
+{
+  "id": "bpc157",
+  "name": "BPC-157",
+  "type": "Synthetic Peptide",
+  "category": "Repair & Recovery",
+  "mechanism": "Upregulates growth hormone receptors, promotes angiogenesis via VEGF pathways, modulates nitric oxide systems, interacts with dopaminergic system",
+  "half_life": "~4 hours",
+  "dosing": "250-500mcg, 1-2x daily",
+  "administration": "Injectable or oral",
+  "primary_benefits": [
+    "Tendon and ligament healing",
+    "Gut mucosal repair",
+    "SIBO treatment support",
+    "Protection against NSAID damage",
+    "Neuroprotection",
+    "Dopaminergic system support"
+  ],
+  "research_findings": "Derived from human gastric juice. Stable in gastric acid. Direct gut-brain axis modulation. Supports recovery from dopamine-depleting agents",
+  "system_targets": [
+    "Digestive",
+    "Musculoskeletal",
+    "Neurological"
+  ],
+  "accessibility": "Widely available research peptide",
+  "cost_tier": "low",
+  "special_notes": "Best bang-for-buck for longevity, gut health (SIBO), and cognitive enhancement"
+}

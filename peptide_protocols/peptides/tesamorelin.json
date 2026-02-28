@@ -1,0 +1,22 @@
+{
+  "id": "tesamorelin",
+  "name": "Tesamorelin",
+  "type": "GHRH Analogue",
+  "category": "Growth Hormone",
+  "mechanism": "Binds to GHRH receptors in the pituitary, stimulating pulsatile GH release that mimics natural secretion patterns",
+  "half_life": "26-38 minutes",
+  "dosing": "1-2mg daily, subcutaneous",
+  "administration": "Subcutaneous injection",
+  "primary_benefits": [
+    "Reduction of visceral adipose tissue",
+    "Improved triglyceride profiles",
+    "Potential cognitive benefits"
+  ],
+  "research_findings": "Clinical trials demonstrated 15-20% reduction in trunk fat. FDA-approved for HIV-associated lipodystrophy. Currently being studied for mild cognitive impairment",
+  "system_targets": [
+    "Endocrine",
+    "Metabolic"
+  ],
+  "accessibility": "Prescription required (FDA-approved)",
+  "cost_tier": "high"
+}

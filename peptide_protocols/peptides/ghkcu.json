@@ -1,0 +1,24 @@
+{
+  "id": "ghkcu",
+  "name": "GHK-Cu",
+  "type": "Copper Peptide",
+  "category": "Aesthetic & Skin Health",
+  "mechanism": "Gene modulation affecting over 4,000 genes. Enhances collagen synthesis, promotes tissue remodeling, antioxidant properties",
+  "half_life": "Not well established",
+  "dosing": "Topical: various concentrations. Injectable: 1-3mg weekly",
+  "administration": "Topical or subcutaneous",
+  "primary_benefits": [
+    "Skin rejuvenation",
+    "Collagen synthesis",
+    "Wound healing",
+    "Hair growth",
+    "Anti-inflammatory effects"
+  ],
+  "research_findings": "Naturally declines with age. Modulates thousands of genes related to tissue repair and inflammation",
+  "system_targets": [
+    "Integumentary",
+    "Aesthetic"
+  ],
+  "accessibility": "Widely available (topical and research)",
+  "cost_tier": "low"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "epitalon",
+  "name": "Epitalon",
+  "type": "Bioregulator Peptide",
+  "category": "Longevity & Anti-Aging",
+  "mechanism": "Activates telomerase in somatic cells, stimulates pineal gland function, modulates neuroendocrine system",
+  "half_life": "Not well established",
+  "dosing": "5-10mg daily for 10-20 day cycles, 2-3 cycles per year",
+  "administration": "Subcutaneous injection",
+  "primary_benefits": [
+    "Telomerase activation",
+    "Telomere elongation",
+    "Lifespan extension (animal studies)",
+    "Improved circadian rhythms",
+    "Antioxidant gene expression",
+    "Potential anti-cancer properties"
+  ],
+  "research_findings": "Tetrapeptide (Ala-Glu-Asp-Gly) from Khavinson research. Studies showed increased telomerase activity and telomere elongation in human cell cultures. Animal research demonstrated lifespan extension",
+  "system_targets": [
+    "Longevity",
+    "Endocrine",
+    "Cellular"
+  ],
+  "accessibility": "Research peptide",
+  "cost_tier": "medium",
+  "special_notes": "Best direct longevity play with telomerase activation data"
+}

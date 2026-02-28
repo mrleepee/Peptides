@@ -1,0 +1,26 @@
+{
+  "id": "kisspeptin",
+  "name": "Kisspeptin",
+  "type": "Neuropeptide Hormone",
+  "category": "Endocrine & Reproductive",
+  "mechanism": "Binds to GPR54 (KISS1R) receptor to stimulate GnRH secretion. Master regulator of hypothalamic-pituitary-gonadal axis. Controls puberty onset and reproductive function",
+  "half_life": "Short (minutes)",
+  "dosing": "Research doses vary, typically 10-100mcg via injection or nasal",
+  "administration": "Subcutaneous, intravenous, or intranasal",
+  "primary_benefits": [
+    "Regulates reproductive hormone production",
+    "May improve libido and sexual function",
+    "Metabolic regulation effects",
+    "Potential cancer suppression properties (KISS1 metastasis suppressor)",
+    "Modulates puberty and fertility"
+  ],
+  "research_findings": "Discovered as metastasis suppressor gene product. Critical for puberty initiation and reproductive function. Research ongoing for hypogonadism treatment, infertility, and potential anti-cancer applications. May have roles in energy balance and metabolism",
+  "system_targets": [
+    "Endocrine",
+    "Reproductive",
+    "Metabolic"
+  ],
+  "accessibility": "Research peptide (limited availability)",
+  "cost_tier": "high",
+  "special_notes": "Complex peptide with multiple potential applications beyond reproduction - metabolic effects, cancer research, and possible longevity connections through reproductive hormone modulation"
+}

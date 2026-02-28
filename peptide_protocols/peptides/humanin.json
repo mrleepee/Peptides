@@ -1,0 +1,29 @@
+{
+  "id": "humanin",
+  "name": "Humanin",
+  "type": "Mitochondrial-derived Peptide",
+  "category": "Longevity & Cytoprotection",
+  "mechanism": "24-amino-acid peptide encoded within mitochondrial 16S rRNA. Binds to specific receptors (formyl peptide receptor-like 1, GP130/WSX-1 complex). Cytoprotective signaling that inhibits apoptosis and oxidative stress",
+  "half_life": "Not well established",
+  "dosing": "Research stage - dosing still being established",
+  "administration": "Subcutaneous or intravenous (research)",
+  "primary_benefits": [
+    "Cellular protection against apoptosis",
+    "Neuroprotection (Alzheimer's, Parkinson's)",
+    "Cardiovascular protection",
+    "Metabolic regulation (insulin sensitivity)",
+    "Anti-inflammatory effects",
+    "Potential longevity extension"
+  ],
+  "research_findings": "Discovered in 2001 during screen for proteins that protect against Alzheimer's-related neuronal death. Humanin levels decline with age. Acts as a cytoprotective factor across multiple cell types. Research shows protection against A-beta toxicity, myocardial ischemia, and other age-related pathologies. May be a key longevity peptide",
+  "system_targets": [
+    "Cellular",
+    "Mitochondrial",
+    "Neurological",
+    "Cardiovascular",
+    "Metabolic"
+  ],
+  "accessibility": "Research peptide (very limited)",
+  "cost_tier": "high",
+  "special_notes": "HIGHLY RELEVANT for longevity - mitochondrial-derived peptide with broad cytoprotective effects. One of the most promising longevity peptides. Levels naturally decline with age. Research stage but highly significant potential"
+}
